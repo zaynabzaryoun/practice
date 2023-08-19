@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- root element wrap all the content -->
+<html>
+  <head>
+    <!--is not displayed in browser when page loaded. contains title and meta data about html document-->
+    <title>HTML crash course</title>
+    <meta charset="utf-8" />
+    <!-- utf-8 is a universal character set that includes any character from any human language. our web page will be able to displaty any language. -->
+    <meta name="author" content="codevolution" />
+    <meta name="description" content="this web page include basic information about HTML" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <!-- script and style tags in head -->
+  </head>
+  <body>
+    <h1>Heading 1</h1>
+    <h2>heading 2</h2>
+    <h3>heading 3</h3>
+    <h4>heading 4</h4>
+    <h5>heading 5</h5>
+    <h6>heading 6</h6>
+
+    <p>This is a paragraph</p>
+    <p>
+      <strong>Lorem ipsum </strong>dolor
+      <br />
+      <!-- use strong and em instead of b and i beacuse b and i dont have any semantic meaning and any meaning for search engine it is only read out text with format for people
+    del: strike throug
+    ins: underline
+ -->
+      sit amet consectetur adipisicing elit. <em>gggggg</em>Corrupti in commodi,
+      ipsam numquam maxime officia magni voluptas perferendis expedita, et
+      voluptatibus unde hic consequuntur accusantium <mark>kkkkk</mark>suscipit
+      dignissimos <del>molestiae dolor</del><ins> sunt</ins>.
+    </p>
+    <hr />
+    <p>
+      Lorem, <sub>ipsum dolor</sub> <sup>sit amet</sup> consectetur adipisicing
+      elit. Cumque aliquam, architecto fuga sint autem reprehenderit. Culpa enim
+      modi autem, <small>sssssssssssssss</small> recusandae quasi odit, quis
+      molestiae, id repellendus nihil fugit incidunt saepe.
+    </p>
+    <div>block 1</div>
+    <div>block 2</div>
+    <span>inline 1</span>
+    <span>inline 2</span>
+
+    <ul>
+      <li>milk</li>
+      <li>egg</li>
+      <li>bread</li>
+    </ul>
+    <ol>
+      <li>reach point a</li>
+      <li>turn right and reach point b</li>
+      <li>turn left</li>
+    </ol>
+
+    <!-- description list: list of terms with description of each terms. has three tag -->
+    <dl>
+      <dt>ice cream</dt>
+      <!--term-->
+      <dd>-some sweet frozen food</dd>
+      <!--term description-->
+      <dt>tea</dt>
+      <dd>-a hot drink</dd>
+    </dl>
+
+    <img src="./Android-logo.jpg" width="200" height="200" alt="androit logo" />
+
+    <a href="https://www.google.com" target="_blank">Google</a>
+    <a href="contact.html">contact</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>heading 1</th>
+          <th>heading 2</th>
+          <th>heading 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>data 1</td>
+          <td>data 2</td>
+          <td>data 3</td>
+        </tr>
+        <tr>
+          <td>data 4</td>
+          <td>data 5</td>
+          <td>data 6</td>
+        </tr>
+        <tr>
+          <td>data 6</td>
+          <td>data 7</td>
+          <td>data 8</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- good practice with form control is tying label with input -->
+    <from>
+      <label for="username">Useename</label><br />
+      <input type="text" id="username" /><br />
+
+      <label for="about">about you</label><br />
+      <textarea id="about"></textarea><br />
+
+      <label for="country">Country</label>
+      <select id="country">
+        <option value="india">India</option>
+        <option value="singapore">Singapore</option>
+        <option value="vietnam">Vietnam</option>
+      </select>
+
+      <label>job type</label><br />
+      <input type="radio" name="jobtype" value="parttime" id="parttime" />
+      <label for="parttime">Part time</label><br />
+
+      <input type="radio" name="jobtype" value="fulltime" id="fulltime" />
+      <label for="fulltime">Full time</label><br />
+
+      <label>job type</label><br />
+      <input type="checkbox" name="jobtype" value="parttime" id="parttimech" />
+      <label for="parttime">Part time</label><br />
+
+      <input type="checkbox" name="jobtype" value="fulltime" id="fulltimech" />
+      <label for="fulltime">Full time</label><br />
+
+      <button>Submit</button>
+    </from>
+  </body>
+</html>
