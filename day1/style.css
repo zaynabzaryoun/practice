@@ -1,4 +1,4 @@
-.blue{
+/* .blue{
     color: rgba(0,0,255, 0.5);
 }
 
@@ -16,11 +16,114 @@ html{
 }
 
 .box{
-    /* height: 1em; */
+     height: 1em;
     height: 1rem;
     width: 100px;
     padding: 20px;
     margin: 50px;
     border: 10px solid black;
     background-color: rgba(255,0,0,.2);
+}  */
+
+
+
+/* -------------------------------------------------------------------- */
+
+
+div.one.two{
+    background-color: bisque;
+}
+
+.grandma .mama{
+    background-color: bisque;
+}
+
+div > b {
+    background-color: aquamarine;
+}
+
+span > b{
+    background-color: blueviolet;
+}
+
+div.one ~ div {
+    background-color: coral;
+}
+
+div.one + div{
+    background-color: deeppink;
+}
+
+li:hover{
+    background-color: burlywood;
+}
+
+input:focus{
+    background-color: aqua;
+}
+
+input:required {
+    background-color: chartreuse;
+}
+
+input:checked {
+    margin: 59px;
+}
+
+input:disabled{
+    margin: 50px;
+}
+
+li:first-child{
+    color: blueviolet;
+}
+
+li:nth-child(2n){
+    background-color: blue;
+}
+
+span:only-child{
+    background-color: darkgreen;
+}
+
+li:last-of-type{
+    background-color: darkorange;
+}
+
+li:only-of-type{
+    background-color: red;
+}
+
+span:only-of-type{
+    background-color: red;
+}
+
+li:not(.hh){
+    background-color: darkseagreen;
+}
+
+.sib::before{
+    content: "helllooooo";
+    background-color: dimgrey;
+
+}
+.sib::after{
+    content: "byebye";
+    background-color: dimgrey;
+
+}
+
+[data-one]{
+    background-color: black;
+}
+
+/* ^= start
+    $=end
+    *= inside
+
+*/
+
+
+a:last-of-type { 
+    background-color: back;
 }
