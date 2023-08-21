@@ -127,3 +127,23 @@ li:not(.hh){
     background-color: black;
 }  */
 
+.parent{
+    background-color: cadetblue;
+    padding: 20px 5px 5px 5px;
+    position: relative;
+}
+.child-one{
+    background-color: lightgreen;
+    position: absolute;
+    position: fixed;
+    left: 20px;
+    
+}
+
+.child-two{
+    background-color: chocolate;
+}
+
+.child-three{
+    background-color: hotpink;
+}
