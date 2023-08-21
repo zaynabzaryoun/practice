@@ -127,7 +127,8 @@ li:not(.hh){
     background-color: black;
 }  */
 
-.parent{
+/* ------position--- */
+/* .parent{
     background-color: cadetblue;
     padding: 20px 5px 5px 5px;
     position: relative;
@@ -146,4 +147,39 @@ li:not(.hh){
 
 .child-three{
     background-color: hotpink;
+} */
+
+
+/* ************************variable:******************** */
+
+:root{
+    --div-background-color: red;
+    --text-color: black;
+    --div-padding:20px;
+    --div-margin: 10px;
+}
+/* falls back */
+body{
+ background-color: var(--background-color, pink);
+}
+
+
+.child{
+    background-color: var(--div-background-color);
+    color: var(--text-color)
+}
+.one{
+    --div-background-color: blue;
+    --text-color: white;
+
+}
+
+.one-one{
+    padding: var(--div-padding);
+    margin: var(--div-margin);
+}
+
+.one-two{
+    padding: var(--div-padding);
+    margin: var(--div-margin);
 }
