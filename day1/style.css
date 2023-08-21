@@ -30,7 +30,7 @@ html{
 /* -------------------------------------------------------------------- */
 
 
-div.one.two{
+/* div.one.two{
     background-color: bisque;
 }
 
@@ -123,6 +123,7 @@ li:not(.hh){
 */
 
 
-a:last-of-type { 
-    background-color: back;
-}
+/* a:last-of-type { 
+    background-color: black;
+}  */
+
