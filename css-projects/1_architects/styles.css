@@ -1,10 +1,13 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 header{
     position: relative;
 }
 .nav{
+    margin-top: 0px;
     display: flex;
     justify-content: space-between;
     padding-right: 8px;
@@ -13,6 +16,10 @@ header{
     letter-spacing: 2px;
     position: sticky;
     top: 0;
+    background-color: white;
+    height: 20px;
+    padding-top: 9px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 a{
     text-decoration: none;
@@ -23,3 +30,20 @@ a{
     display: flex;
     gap: 14px;
 } 
+
+.banner{
+    width: 100%;
+    height: auto;
+}
+
+.title-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    position: absolute;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
