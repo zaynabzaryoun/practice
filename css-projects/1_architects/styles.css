@@ -64,14 +64,17 @@ a{
 .seperator{
     border-top: #eaeaea solid 0.7px;
     width: 96%;
+<<<<<<< HEAD
     margin-bottom: 18px;
     margin-top: -14px;
     margin-left: 16px;
+=======
+    margin-bottom: 22px;
+    margin-top: -10px;
+>>>>>>> e12c2b74220da8e5b6414f27967874fb51f6bb03
     
 }
 .section-title{
-    /* position: absolute; */
-    /* left: 16px; */
     margin-left: 16px;
     font-weight: 100;
 }
@@ -118,13 +121,23 @@ a{
 }
 
 .position{
+<<<<<<< HEAD
     margin-top: -29px;
+=======
+    position: relative;
+    top: -29px; 
+>>>>>>> e12c2b74220da8e5b6414f27967874fb51f6bb03
     color: rgb(97, 96, 96);
     font-size: 7.6px;
     font-weight: 400;
 }
 
 .text {
+<<<<<<< HEAD
+=======
+    position: relative;
+    top: -29px; 
+>>>>>>> e12c2b74220da8e5b6414f27967874fb51f6bb03
     color: rgb(0, 0, 0);
     font-size: 7.6px;
     font-weight: 400;
@@ -135,11 +148,16 @@ button {
     border: none;
     font-size: 7.6px;
     padding: 5px 0px;
+<<<<<<< HEAD
+=======
+    /* margin-top: -85px; */
+>>>>>>> e12c2b74220da8e5b6414f27967874fb51f6bb03
 }
 button:hover{
     background-color: rgb(172, 172, 172);
     cursor: pointer;
 }
+<<<<<<< HEAD
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -203,3 +221,8 @@ footer a:hover{
     color: rgb(18, 153, 18);
     cursor: pointer;
 }
+=======
+
+
+
+>>>>>>> e12c2b74220da8e5b6414f27967874fb51f6bb03
