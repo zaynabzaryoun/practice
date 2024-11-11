@@ -2,8 +2,6 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-}
-header{
     position: relative;
 }
 .nav{
@@ -14,12 +12,16 @@ header{
     padding-left: 8px;
     font-size: 9px;
     letter-spacing: 2px;
-    position: sticky;
+    position: fixed;
     top: 0;
     background-color: white;
     height: 20px;
     padding-top: 9px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+    padding: 9px 16px 19px 16px;
 }
 a{
     text-decoration: none;
@@ -62,8 +64,9 @@ a{
 .seperator{
     border-top: #eaeaea solid 0.7px;
     width: 96%;
-    margin-bottom: 22px;
-    margin-top: -10px;
+    margin-bottom: 18px;
+    margin-top: -14px;
+    margin-left: 16px;
     
 }
 .section-title{
@@ -115,16 +118,13 @@ a{
 }
 
 .position{
-    position: relative;
-    top: -29px; 
+    margin-top: -29px;
     color: rgb(97, 96, 96);
     font-size: 7.6px;
     font-weight: 400;
 }
 
 .text {
-    position: relative;
-    top: -29px; 
     color: rgb(0, 0, 0);
     font-size: 7.6px;
     font-weight: 400;
@@ -135,12 +135,71 @@ button {
     border: none;
     font-size: 7.6px;
     padding: 5px 0px;
-    /* margin-top: -85px; */
 }
 button:hover{
     background-color: rgb(172, 172, 172);
     cursor: pointer;
 }
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
 
+input{
+    font-size: 7px;
+    border: 0.7px solid rgb(216, 216, 216);
+    width: 95%;
+    margin: 0;
+    padding: 6px 3px;
+}
 
+.about-text{
+    font-size: 7px;
+    margin: -8px 0px 8px 16px;
+}
+.contact-btn{
+    background-color: black;
+    color: #fff;
+    width: 10%;
+    text-transform: uppercase;
+    position: relative;
+    left: 17px;
+    top: 10px
+}
 
+.img-parent{
+    display: flex;
+    justify-content: center;
+    margin-top: 37px;
+}
+.city-img {
+    width: 96%;
+}
+
+footer{
+    background-color: black;
+    color: #fff;
+    height: 43px;
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h6{
+    margin: 0;
+    font-size: 7.5px;
+    font-weight: 400;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover{
+    color: rgb(18, 153, 18);
+    cursor: pointer;
+}
