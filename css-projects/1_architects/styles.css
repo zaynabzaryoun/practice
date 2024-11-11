@@ -43,7 +43,104 @@ a{
 }
 
 .title{
+    letter-spacing: 2px;
     position: absolute;
-    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    font-size: 22px;
 }
+
+.bold{
+    margin-right: 10px;
+   padding: 5px 9px;
+    background: rgba(19, 18, 18, 0.7);
+     /* opacity: 0.3; */
+     color: rgba(255, 255, 255, 0.7);
+}
+
+
+.seperator{
+    border-top: #eaeaea solid 0.7px;
+    width: 96%;
+    margin-bottom: 22px;
+    margin-top: -10px;
+    
+}
+.section-title{
+    /* position: absolute; */
+    /* left: 16px; */
+    margin-left: 16px;
+    font-weight: 100;
+}
+
+.projects-section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card, .about-card{
+    position: relative;
+    margin: 1px -6px 3px -5px;
+}
+
+.card img, .about-card img{
+    width: 176px;
+    height: 117px;
+}
+
+.card p{
+    position: absolute;
+    top: -7px;
+    font-size: 7px;
+    color: #fff;
+    background-color: black;
+    padding: 4px 7px;
+}
+
+.about-section{
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.about-card{
+    width: 176px;
+}
+
+.about-card h6{
+    position: relative;
+    top: -15px; 
+    font-weight: 100;
+    width: 174px;
+}
+
+.position{
+    position: relative;
+    top: -29px; 
+    color: rgb(97, 96, 96);
+    font-size: 7.6px;
+    font-weight: 400;
+}
+
+.text {
+    position: relative;
+    top: -29px; 
+    color: rgb(0, 0, 0);
+    font-size: 7.6px;
+    font-weight: 400;
+}
+
+button {
+    width: 100%;
+    border: none;
+    font-size: 7.6px;
+    padding: 5px 0px;
+    /* margin-top: -85px; */
+}
+button:hover{
+    background-color: rgb(172, 172, 172);
+    cursor: pointer;
+}
+
+
 
