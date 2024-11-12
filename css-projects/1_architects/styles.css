@@ -54,10 +54,9 @@ a{
 
 .bold{
     margin-right: 10px;
-   padding: 5px 9px;
+    padding: 5px 9px;
     background: rgba(19, 18, 18, 0.7);
-     /* opacity: 0.3; */
-     color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 
