@@ -64,21 +64,8 @@ let message;
 // console.log(idFast);
 
 
-let day = 3;
+//
 
-let dayname;
-switch (day) {
-    case 1:
-        dayname = "sunday";
-        break;
-    case 2:
-        dayname = "monday"
-        break;
-    default:
-        console.log("invalid");
-        
-        break;
-}
 
 
 
@@ -118,6 +105,103 @@ switch (day) {
 // console.log(dayCount); // 29
 
 
+// let i =0
+// do {
+//     console.log(i);
+//     i++;
+    
+// }while(i<5)
 
+
+// let min = 2;
+// let max = 5;
+// const randomNum = Math.floor(Math.random() * (max - min)) + min
+
+// console.log(randomNum);
+
+// let n = parseInt(prompt(`enter a num between ${min} and ${max} : `))
+// let guess = 1;
+
+// while (n !== randomNum) {
+//     if (n > randomNum) {
+//         n = parseInt(prompt("random is smaller"))
+//         guess++;
+//     } else {
+        
+//         n = parseInt(prompt("random is greater"))
+//         guess++;
+//     }
+    
+// }
+
+// console.log(`congs! the ramfom num is ${randomNum} in ${guess} attempts`);
+
+// let sum = 0;
+
+// for (let i = 1; i <= 10; i++){
+//     sum = i + sum;
+// }
+// console.log(sum);
+
+// for (let i = 1; i <= 5; i++){
+//     for (let j = 1; j <= 3; j++){
+
+//         if (j === 2) {
+//             break;
+//         }
+//         console.log(i, j);
+//     }
+// }
+
+// for (let i = 1; i <= 10; i++){
+//     if (i % 2 === 0) {
+//         continue;
+//     }
+//     console.log(i);
+    
+// }
+// function declaration
+// function logger(message) {
+//     console.log(message);
+// }
+
+// let resultt = logger("hello")
+// console.log(resultt)
+
+// function compare(a, b) {
+//     if (a > b) {
+//         return -1
+//     } else if (a < b) {
+//         return 1
+//     } else {
+//         return 0
+//     }
+// }
+
+// let n = compare(1, 3)
+
+// console.log(n);
+
+
+// function messager(message) {
+//     if (!message) {
+//         return
+//     }
+//     console.log(message);
+    
+// }
+
+// let r= messager("")
+
+// function add(a1, a2){
+//     return a1 + a2;
+// }
+
+// let resul = add(1, 3)
+
+// console.log(resul);
+
+// console.log(resul(1, 3));
+// console.log(add(1,3));
 
 
