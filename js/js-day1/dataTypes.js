@@ -205,3 +205,77 @@ let message;
 // console.log(add(1,3));
 
 
+// function cmToInch(length) {
+//     return length/2.54
+// }
+
+// function inchToCm(length) {
+//     return length*2.54
+// }
+
+// function convert(fn, length) {
+//     return fn(length)
+// }
+
+// let cms = convert(inchToCm, 100)
+// console.log(cms);
+
+//anonymous function
+// (function () {
+//     return
+// })
+
+// let show = function () {
+//     console.log("hello");
+// }
+// show()
+
+// setTimeout(function () {
+//     console.log("*******");
+    
+// }, 1000)
+
+
+//  let person = {
+//     name: "zz",
+//     lastName: "f"
+// };
+
+// (function(person) {
+//     console.log(`${person.name}`);
+// })(person);
+
+
+
+// console.log(function(){
+//     console.log("arroe");
+    
+// }());
+
+// let person = {
+//     firstName: 'John',
+//     lastName: 'Doe'
+// };
+
+// (function () {
+//     console.log(person.firstName + ' ' + person.lastName);
+// })(person);
+
+
+// let show = function () {
+//     console.log('Anonymous function');
+// };
+
+// let show = () => console.log("aaa");
+
+
+// let add = function (a, b) {
+//     return a + b;
+// };
+
+// let add = (a,b) => {
+//     return a+b
+// }
+
+// let add = (a,b) => a+b
+
