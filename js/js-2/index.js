@@ -18,10 +18,10 @@ for (let score of scores) {
 //   console.log(score);
 }
 
-let ranks = ['A', 'B', 'C'];
-ranks.forEach(function(e, index, arr) {
-    console.log(e, index, arr);
-});
+// let ranks = ['A', 'B', 'C'];
+// ranks.forEach(function(e, index, arr) {
+//     console.log(e, index, arr);
+// });
 
 // const numbers = [1, 2, 3];
 // numbers.forEach(function (e) {
@@ -50,3 +50,34 @@ const numbers = [1, 2, 3];
 // console.log(newNumbers);
 // console.log(numbers);
 
+// const sayHello = (name) => {
+//     return `hello ${name}`
+// }
+
+
+// const sayHello = name => `hello ${name}`
+// console.log(sayHello("lila"));
+
+// setTimeout(function () {
+//     console.log("hello");
+    
+// }, 4000)
+
+// setInterval(function () {
+//     console.log("hellooo");
+    
+// },4000)
+
+// setInterval(()=> console.log("gg"), 4000)
+
+function startCountdown(seconds) {
+    const interval = setInterval(() => {
+        console.log("count down", seconds);
+    seconds--;
+    if (seconds === -1) {
+        console.log("times up");
+        clearInterval(interval)
+    }
+    },1000)
+}
+startCountdown(4)
