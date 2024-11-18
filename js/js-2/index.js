@@ -70,14 +70,94 @@ const numbers = [1, 2, 3];
 
 // setInterval(()=> console.log("gg"), 4000)
 
-function startCountdown(seconds) {
-    const interval = setInterval(() => {
-        console.log("count down", seconds);
-    seconds--;
-    if (seconds === -1) {
-        console.log("times up");
-        clearInterval(interval)
+// function startCountdown(seconds) {
+//     const interval = setInterval(() => {
+//         console.log("count down", seconds);
+//     seconds--;
+//     if (seconds === -1) {
+//         console.log("times up");
+//         clearInterval(interval)
+//     }
+//     },1000)
+// }
+// startCountdown(4)
+
+// console.log(typeof 3);
+
+// function squareNumbers(arr) {
+//     const newArr =  []
+//     for (let n of arr) {
+//         if (typeof n !== "number") {
+//             continue
+//         }
+//         newArr.push(n**2)
+//     }
+//     return newArr
+// }
+
+// console.log(squareNumbers([1, "g", 3, 4]));
+// console.log(squareNumbers([-1, -2, 0, 2]));
+
+
+function groupAnagrams(words) {
+    const obj = {}
+    for (let word of words) {
+        let sortedWord = word.split('').sort().join('');
+        if (!obj.hasOwnProperty(sortedWord)) {
+            obj[sortedWord] = [];
+        }
+        console.log("word",word);
+        console.log("sorted",sortedWord);
+        
+        obj[sortedWord].push(word);
     }
-    },1000)
+    return obj
 }
-startCountdown(4)
+
+
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+
+
+
+
+// function sumOfEvens(numbers){
+//     let sum = 0;
+//     for (let num of numbers) {
+//         if (num %2===0) {
+//             sum+=num
+//         }
+//     }
+//     return sum
+// }
+
+
+// console.log(sumOfEvens([1, 2, 3, 4, 5]));
+
+
+function countVowels(str) {
+    count = 0
+    str = str.toLowerCase()
+    for (let s of str) {
+        switch (s) {
+            case "o":
+                count++
+                break;
+            case "a":
+                count++
+                break
+            case "e":
+                count++
+                break
+            case "i":
+                count++
+                break
+            case "u":
+                count++
+                break    
+        }
+        
+    }
+    return count
+}
+
+countVowels("hello"); 
