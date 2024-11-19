@@ -147,19 +147,19 @@
 /*************************************** - 8 -*************************************/
 //Write a function takes a string and returns an array of all the unique words that contain either the letter "f" or "g". The search should be case-insensitive, and punctuation should be ignored.
 
-function findMatches(str) {
-    str = str.toLowerCase().replace(/[!,.,?]/g, "")
-    str = str.split(" ")    
-    newArr = [];
-    for (let s of str){
-        if (!newArr.includes(s) && (s.includes("f") || s.includes("g")) ) {
-            newArr.push(s)
-        }
-    }
-    return newArr
-} 
+// function findMatches(str) {
+//     str = str.toLowerCase().replace(/[!,.,?]/g, "")
+//     str = str.split(" ")    
+//     newArr = [];
+//     for (let s of str){
+//         if (!newArr.includes(s) && (s.includes("f") || s.includes("g")) ) {
+//             newArr.push(s)
+//         }
+//     }
+//     return newArr
+// } 
 
-console.log(findMatches("Sky is clear."));
+// console.log(findMatches("Sky is clear."));
 
 
                                                                 // Output: ["fantastic", "frogs", "far"]
@@ -170,9 +170,60 @@ console.log(findMatches("Sky is clear."));
 //********************************* -9- ******************************/
 // 9- Write a function called  that takes a string containing multiple lines of text and extracts all valid email addresses. The function should return an array of unique email addresses, ensuring the extraction is case-insensitive. An email address is considered valid if it follows the format: local_part@domain_name, where:
 
-function extractEmails(text) {
-    const re = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b/g
-    return text.match(re)
-}
+// function extractEmails(text) {
+//     const re = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b/g
+//     return text.match(re)
+// }
 
-console.log(extractEmails("Hello from test.email123@my-site.com and sales@some-company.net! For more info, email me at: info123@site.com."));
+// console.log(extractEmails("Hello from test.email123@my-site.com and sales@some-company.net! For more info, email me at: info123@site.com."));
+
+
+// const nums = [1, 3, 2, 7];
+// const filtered = nums.some(e => e > 2)
+
+// console.log(filtered);
+
+// const numbers = [1, 2, 3];
+// let total = numbers.reduce((acc, cur) => acc + 6)
+// console.log(total);
+
+//*********************************- 10 -******************************************/
+//You are tasked with analyzing a dataset of student scores to identify students who passed a specific subject and calculate their overall scores. Write a function called processStudents that meets the following requirements:
+
+// The function accepts two arguments: 1-An array of student objects, 2-A subject name (subject string).
+// The function should:
+// Find students who scored 50 or higher in the given subject.
+// Calculate the total score across all subjects for each of those students.
+// Return a new array of objects for the passing students, where each object has the following format:
+// {
+//     name: string,      // The student's name
+//     totalScore: number // Their total score across all subjects
+//   }
+// If no student passes, the function should return an empty array.
+// Assume each student has the same set of subjects in their scores object.
+  
+
+const students = [
+    { name: "Alice", scores: { math: 80, english: 45, science: 60 } },
+    { name: "Bob", scores: { math: 30, english: 50, science: 70 } },
+    { name: "Charlie", scores: { math: 90, english: 85, science: 95 } },
+    { name: "Diana", scores: { math: 40, english: 35, science: 45 } },
+  ];
+  const subject = "math";
+  // expected output:   [
+  //             { name: "Alice", totalScore: 185 },
+  //             { name: "Charlie", totalScore: 270 }
+  //           ];
+  
+//answer:
+function processStudents(arrOfStudents, subjectName) {
+    const passedStudend = arrOfStudents.filter(student => student.scores[subjectName] >= 50)
+    const passedStudendWithTotalScore = passedStudend.map(s => {
+        s["totalScore"] = s.scores.math + s.scores.english + s.scores.science
+        delete s.scores 
+        return s;
+    })
+    return passedStudendWithTotalScore
+}
+console.log(processStudents(students, subject));
+  
