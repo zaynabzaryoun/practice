@@ -29,7 +29,7 @@ for (let score of scores) {
 
 // console.log(numbers);
 
-const numbers = [1, 2, 3];
+// const numbers = [1, 2, 3];
 // numbers.forEach(function (e, index, array) {
 //     array[index] = e**2
 
@@ -82,6 +82,10 @@ const numbers = [1, 2, 3];
 // console.log(typeof 3);
 
 
+// const numbers = [1, 2, 3, 4, 5];
+
+// const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+// console.log(sum);
 
 
 
