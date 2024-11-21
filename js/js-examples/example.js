@@ -76,7 +76,7 @@
 //     }, 0)
 // }
 
-console.log(sumOfEven([1, 2, 3, 4, 5]));
+// console.log(sumOfEven([1, 2, 3, 4, 5]));
             
 /*****************************************  5 ******************************************/
 //5 -Write a function that takes a string and returns the number of vowels it contains.
@@ -246,16 +246,75 @@ console.log(sumOfEven([1, 2, 3, 4, 5]));
 
 //Counting Occurrences
 // Output: { apple: 3, banana: 2, orange: 1 }
-const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple', "banana"];
-const count = fruits.reduce((acc, cur) => {
-    if (acc[cur]) {
-        acc[cur]+=1
-    } else {
-        acc[cur] = 1
-    }
-    return acc
+// const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple', "banana"];
+// const count = fruits.reduce((acc, cur) => {
+//     if (acc[cur]) {
+//         acc[cur]+=1
+//     } else {
+//         acc[cur] = 1
+//     }
+//     return acc
   
-} ,{})
-console.log(count);
+// } ,{})
+// console.log(count);
 
+
+/************************************************- 12 -************************************************************/
+// let globalVar = "global";
+
+// function outerFunction(param) {
+//   let outerVar = "outer";
+
+//   function innerFunction() {
+//     let innerVar = "inner";
+
+//     console.log("Inside innerFunction:");
+//     console.log("globalVar:", globalVar); // (1)
+//     console.log("outerVar:", outerVar);   // (2)
+//     console.log("param:", param);         // (3)
+//     console.log("innerVar:", innerVar);   // (4)
+//   }
   
+//   if (true) {
+//       let blockVar = "block";
+//       var functionVar = "function";
+//     }
+    
+//     console.log("Inside outerFunction:");
+//     console.log("blockVar:", typeof blockVar);   // (5)
+//     console.log("functionVar:", typeof functionVar); // (6)
+    
+//     return innerFunction;
+// }
+
+// let testFunction = outerFunction("parameter");
+// testFunction();
+//answer:
+//(1) "global"
+//(2) "outer"
+//(3) "parameter"
+//(4) "inner"
+//(5) undefined
+//(6) string
+
+// console.log("Outside functions:");
+// console.log("outerVar:", typeof outerVar);   // (7)
+// console.log("functionVar:", typeof functionVar); // (8)
+
+//(7) unefined
+//(8) function
+
+
+//##global scope, when variable is  defined outside of any block. when can access this variable(of any kind) from anywhere
+
+//##block scope, when variable id defined inside of { } of if, for, ... .
+//const and let if are block scope can not be accessed from outside.
+
+//##function scope, varaible define inside of { } of functin. you can access any kind of variable(even var) from outside
+
+//##var is either functiobn scope oe gobal scope. never block scope. when you declare var outside of any function it is global scope and can be accessed from anywhere. if var is declare inside of a function or inside of a block which this block is inside of function it is function scope, and you cannot accessed outside of function.
+//so: If you declare a var inside a block (like an if, for, or while), it ignores the block and acts as if it were declared at the top of the nearest function or global scope.
+
+/************************************************- 13 -************************************************************/
+
+

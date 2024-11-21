@@ -92,9 +92,14 @@ for (let score of scores) {
 //##global scope, when variable is  defined outside of any block. when can access this variable(of any kind) from anywhere
 
 //##block scope, when variable id defined inside of { } of if, for, ... .
-//const and let if are block scope can not be accessed from outside. but you can access var.
+//const and let if are block scope can not be accessed from outside.
 
 //##function scope, varaible define inside of { } of functin. you can access any kind of variable(even var) from outside
+
+//##var is either functiobn scope oe gobal scope. never block scope. when you declare var outside of any function it is global scope and can be accessed from anywhere. if var is declare inside of a function or inside of a block which this block is inside of function it is function scope, and you cannot accessed outside of function.
+//so: If you declare a var inside a block (like an if, for, or while), it ignores the block and acts as if it were declared at the top of the nearest function or global scope.
+
+
 
 //dynamic property
 
