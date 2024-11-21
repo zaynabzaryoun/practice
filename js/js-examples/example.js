@@ -30,7 +30,7 @@
 // console.log(squareNumbers([1, "g", 3, 4]));
 // console.log(squareNumbers([-1, -2, 0, 2]));
 
-/******************************************************************/
+/****************************************************- 3 -***************************************************************/
 //3- Write a function that takes an array of strings and groups the anagrams together. An anagram is a word that can be formed by rearranging the letters of another. The function should return an array of arrays, where each inner array contains words that are anagrams of each other.
 
 
@@ -51,10 +51,11 @@
 
 // console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
 
-/***************************************** 4 ****************************************/
+/***************************************************- 4 -********************************************************/
 //4- Write a function that takes an array of numbers and returns the sum of all the even numbers in the array.
 
 
+//solution 1:
 // function sumOfEvens(numbers){
 //     let sum = 0;
 //     for (let num of numbers) {
@@ -64,9 +65,19 @@
 //     }
 //     return sum
 // }
+        
+// solution 2:
+// function sumOfEven(arr) {
+//     return arr.reduce((acc, cur) => {
+//         if (!(cur % 2)) {
+//           return acc+cur
+//         }
+//         return acc
+//     }, 0)
+// }
 
-// console.log(sumOfEvens([1, 2, 3, 4, 5]));
-
+console.log(sumOfEven([1, 2, 3, 4, 5]));
+            
 /*****************************************  5 ******************************************/
 //5 -Write a function that takes a string and returns the number of vowels it contains.
 

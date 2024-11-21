@@ -89,3 +89,44 @@ for (let score of scores) {
 
 
 
+//##global scope, when variable is  defined outside of any block. when can access this variable(of any kind) from anywhere
+
+//##block scope, when variable id defined inside of { } of if, for, ... .
+//const and let if are block scope can not be accessed from outside. but you can access var.
+
+//##function scope, varaible define inside of { } of functin. you can access any kind of variable(even var) from outside
+
+//dynamic property
+
+// const key = "color"
+// const obj = {};
+
+// // obj["color"]
+// obj[key] = "fvfv"
+
+// console.log(obj);
+
+// let key = "age"
+
+// const obj = {
+//   fname: "sara",
+//   [key]: 20
+// }
+
+
+// const obj = {}
+// for (let i = 0; i < 10; i++){
+//   obj[`key${i}`] = i
+  
+// }
+
+// console.log(obj);
+
+
+let key = prompt("enter property name: ")
+const person = {
+  id: 1,
+  [key]: "vfv"
+}
+
+console.log(person);
