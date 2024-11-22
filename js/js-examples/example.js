@@ -316,5 +316,134 @@
 //so: If you declare a var inside a block (like an if, for, or while), it ignores the block and acts as if it were declared at the top of the nearest function or global scope.
 
 /************************************************- 13 -************************************************************/
+// 13-part 1:
+// Access and log the city value from the address.
+// Add a new property profession with the value "Front-End Developer".
+// Update the age property to 26.
+// Access and log the second hobby in the hobbies array.
+
+// const person = {
+//     name: "Zaynab",
+//     age: 25,
+//     address: {
+//       city: "Hamedan",
+//       postalCode: 65178,
+//     },
+//     hobbies: ["reading", "coding", "gym"],
+// };
+// console.log(person.address.city);
+// console.log(person["address"]["city"]);
+// person.profession = "Front-End Developer"
+// person["profession"] = "front-end developer"
+// person["age"] = 26
+// console.log(person.hobbies[1]);
+
+//13-part 2:
+// Access the first-name property dynamically using a variable.
+// Add a new property salary dynamically with the value 5000.
+// Delete the job property from the object.
+
+// const dynamicObject = {
+//     "first-name": "Ali",
+//     "last-name": "Rezaei",
+//     job: "Engineer",
+//   };
+
+// console.log(dynamicObject["first-name"]);
+// let key = "first-name"
+// console.log(dynamicObject[key]);
+
+// let newKey = "salary"
+// dynamicObject[newKey] = 5000
+// console.log(dynamicObject);
+
+// delete dynamicObject.job;
+// console.log(dynamicObject);
+
+//13-part 3:
+// const products = [
+//     { id: 1, name: "Laptop", price: 1500 },
+//     { id: 2, name: "Phone", price: 800 },
+//     { id: 3, name: "Tablet", price: 600 },
+//   ];
+
+// Increase the price of all products by 10%.
+// Add a new product to the array: { id: 4, name: "Monitor", price: 300 }.
+// Find the product with the name "Phone" and log its details.
+
+// for (let product of products) {
+//     console.log(product);
+//     product.price = 1.1 * product.price
+// }
+// console.log(products);
+
+// products.push({ id: 4, name: "Monitor", price: 300 })
+
+// const a = products.find(e => e.name === "Phone")
+// console.log(a);
+
+//13-part 4:
+// const student = {
+//     name: "Sara",
+//     grade: 12,
+//     subjects: {
+//       math: 90,
+//       physics: 85,
+//       chemistry: 88,
+//     },
+//   };
+// Iterate over the subjects object using a for...in loop and log the subject name and its corresponding grade.
+// Calculate and log the average grade of all subjects.
+
+// let subjects = student.subjects
+// let sum = 0
+// for (let subject in subjects) {
+//     console.log(subject, "-", subjects[subject]);
+//     sum += subjects[subject]
+// }
+// console.log(sum/3);
+
+// const grades = Object.values(student.subjects)
+// const sum = grades.reduce((acc, cur) => acc + cur)
+// const average = sum / grades.length
+// console.log(average);
+
+//13-part 5:
+// const company = {
+//     name: "TechCorp",
+//     employees: [
+//       { name: "Ali", role: "Manager", salary: 8000 },
+//       { name: "Reza", role: "Developer", salary: 6000 },
+//       { name: "Sara", role: "Designer", salary: 5500 },
+//     ],
+//   };
+//   Log the role of the second employee.
+//   Calculate the total salary of all employees.
+//   Add a new employee: { name: "Mina", role: "Intern", salary: 3000 }.
+
+// console.log(company.employees[1].role);
+// console.log(Object.values(company)[1][1].role);
+
+// const employees = company.employees
+// let sum = 0
+// let a = employees.map(e => {
+//     return sum += e.salary
+// })
+// console.log(sum);
+
+// company.employees.push({ name: "Mina", role: "Intern", salary: 3000 })
+// console.log(company);
+
+/************************************************- 14 -************************************************************/
 
 
+
+
+
+
+
+
+
+
+
+  

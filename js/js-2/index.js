@@ -128,10 +128,24 @@ for (let score of scores) {
 // console.log(obj);
 
 
-let key = prompt("enter property name: ")
-const person = {
-  id: 1,
-  [key]: "vfv"
+// let key = prompt("enter property name: ")
+// const person = {
+//   id: 1,
+//   [key]: "vfv"
+// }
+
+// console.log(person);
+
+function sum(a, b, c) {
+  return a + b + c;
 }
 
-console.log(person);
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const cimbined = [...array1, ...array2]
+console.log(cimbined);
+
