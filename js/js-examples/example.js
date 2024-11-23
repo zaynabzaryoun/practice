@@ -435,6 +435,89 @@
 // console.log(company);
 
 /************************************************- 14 -************************************************************/
+//14-part 1:
+//What will be the output of the following code snippet, and why?
+const original = [1, 2, 3];
+const nested = [4, 5, original]; 
+const flatCopy = [...nested]; 
+flatCopy[2][0] = 99; 
+
+
+// console.log(nested[2][0]); // ?
+// console.log(flatCopy[2][0]); // ?
+// console.log(flatCopy); // ?
+// console.log(nested); // ?
+
+//answer:
+//the scpread operator(...) only copies the top level of an array or obj. if there are nested arrays or obj insidesc thoes are not copied. they are shared between the origial and the copy.
+
+
+//14- part2:
+// const obj1 = { a: 10, b: 20 };
+// const obj2 = { b: 30, c: 40 };
+// const obj3 = { ...obj1, ...obj2, d: 50 };
+// //{a: 10, b:30, c:40, d:50}
+// const modify = ({ b, ...rest }) => {
+//   rest.a += b; // 10+30 => a =40
+//   return { ...rest, b: b * 2 }; // {a:40, c:50, d:50}  b: 60
+// };
+
+// const result = modify(obj3);
+
+// console.log(result.a); // ?
+// console.log(result.b); // ?
+// console.log(result.c); // ?
+// console.log(result.d); // ?
+// console.log(obj3.b);   // ?
+
+
+//****************************************************- 15 -*********************************************************8 */
+// function processValues(a, b, ...rest) {
+//   const sum = rest.reduce((acc, val) => acc + val, 0);
+//   const filteredRest = rest.filter(e => typeof(e) === "number" && !isNaN(e)) || 0
+//   console.log(filteredRest);
+  
+//   const maxOfRest = filteredRest.length > 0 ? Math.max(...filteredRest) : 0;
+//   const [x, y = 10, ...remaining] = rest;
+  
+//   return {
+//     max: maxOfRest,
+//     product: a * b * (x || 1),
+//     average: sum / (rest.length || 1),
+//     remaining,
+//   };
+// }
+
+// const result = processValues(2, 3, 5, undefined, 15, 20, 25);
+
+
+// console.log(result.product); // ?
+// console.log(result.average); // ?
+// console.log(result.remaining); // ?
+
+//answer
+// (x || 1): These expressions make use of the logical OR (||) operator to provide default values when the first operand is a "falsy" value. The || operator evaluates the left-hand side (LHS) first. If the LHS is truthy, it returns that value. If the LHS is falsy, it evaluates and returns the right-hand side (RHS).
+
+//part2: Rewrite the function to also return the maximum value from rest, defaulting to 0 if rest is empty.
+
+// function processValues(a, b, ...rest) {
+//   const sum = rest.reduce((acc, val) => acc + val, 0); 
+//   const filteredRest = rest.filter(e => typeof(e) === "number" && !isNaN(e)) || 0
+//   console.log(filteredRest);
+
+//   const maxOfRest = filteredRest.length > 0 ? Math.max(...filteredRest) : 0; 
+//   const [x, y = 10, ...remaining] = rest; 
+  
+//   return {
+//     max: maxOfRest,
+//     product: a * b * (x || 1),
+//     average: sum / (rest.length || 1),
+//     remaining,
+//   };
+// }
+
+// const result2 = processValues(2, 3, 5, undefined, 15, 20, 25);
+// console.log(result2.max);
 
 
 
