@@ -437,10 +437,10 @@
 /************************************************- 14 -************************************************************/
 //14-part 1:
 //What will be the output of the following code snippet, and why?
-const original = [1, 2, 3];
-const nested = [4, 5, original]; 
-const flatCopy = [...nested]; 
-flatCopy[2][0] = 99; 
+// const original = [1, 2, 3];
+// const nested = [4, 5, original]; 
+// const flatCopy = [...nested]; 
+// flatCopy[2][0] = 99; 
 
 
 // console.log(nested[2][0]); // ?
