@@ -202,6 +202,3 @@ for (let score of scores) {
 // }
 
 // logger("ali")
-
-
-
