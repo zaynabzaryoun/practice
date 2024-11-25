@@ -202,3 +202,48 @@ for (let score of scores) {
 // }
 
 // logger("ali")
+
+function trickyScopeExample() {
+  // Function scope
+  if (true) {
+    var funcScopedVar = "I'm function-scoped (var)";
+    let blockScopedLet = "I'm block-scoped (let)";
+    const blockScopedConst = "I'm block-scoped (const)";
+  }
+
+  console.log(funcScopedVar); // ✅ Accessible: "I'm function-scoped (var)"
+  // console.log(blockScopedLet); // ❌ ReferenceError: blockScopedLet is not defined
+  // console.log(blockScopedConst); // ❌ ReferenceError: blockScopedConst is not defined
+
+  for (var i = 0; i < 3; i++) {
+    var funcScopedInsideLoop = "I'm still function-scoped (var)";
+    let blockScopedInsideLoop = `Block-scoped in iteration ${i} (let)`;
+    const blockScopedConstInsideLoop = `Block-scoped in iteration ${i} (const)`;
+
+    console.log("Inside loop:", blockScopedInsideLoop);
+    console.log("Inside loop:", blockScopedConstInsideLoop);
+  }
+
+  console.log(funcScopedInsideLoop); // ✅ Accessible: "I'm still function-scoped (var)"
+  // console.log(blockScopedInsideLoop); // ❌ ReferenceError: blockScopedInsideLoop is not defined
+  // console.log(blockScopedConstInsideLoop); // ❌ ReferenceError: blockScopedConstInsideLoop is not defined
+
+  // Using var in a loop creates an unexpected behavior:
+  console.log("Loop counter after the loop (var):", i); // ✅ Accessible: 3
+
+  // Block-level shadowing
+  let outerLet = "I'm outer (let)";
+  {
+    let outerLet = "I'm inner (let, shadowing outerLet)";
+    console.log(outerLet); // ✅ Accessible: "I'm inner (let, shadowing outerLet)"
+  }
+  console.log(outerLet); // ✅ Accessible: "I'm outer (let)"
+
+  // Hoisting quirk with var
+  console.log(hoistedVar); // ✅ Undefined (due to hoisting)
+  // console.log(hoistedLet); // ❌ ReferenceError: Cannot access 'hoistedLet' before initialization
+  var hoistedVar = "I was hoisted (var)";
+  let hoistedLet = "I was not hoisted (let)";
+}
+
+trickyScopeExample();
