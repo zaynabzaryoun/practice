@@ -203,47 +203,114 @@ for (let score of scores) {
 
 // logger("ali")
 
-function trickyScopeExample() {
-  // Function scope
-  if (true) {
-    var funcScopedVar = "I'm function-scoped (var)";
-    let blockScopedLet = "I'm block-scoped (let)";
-    const blockScopedConst = "I'm block-scoped (const)";
-  }
+// function trickyScopeExample() {
+//   // Function scope
+//   if (true) {
+//     var funcScopedVar = "I'm function-scoped (var)";
+//     let blockScopedLet = "I'm block-scoped (let)";
+//     const blockScopedConst = "I'm block-scoped (const)";
+//   }
 
-  console.log(funcScopedVar); // ✅ Accessible: "I'm function-scoped (var)"
-  // console.log(blockScopedLet); // ❌ ReferenceError: blockScopedLet is not defined
-  // console.log(blockScopedConst); // ❌ ReferenceError: blockScopedConst is not defined
+//   console.log(funcScopedVar); // ✅ Accessible: "I'm function-scoped (var)"
+//   // console.log(blockScopedLet); // ❌ ReferenceError: blockScopedLet is not defined
+//   // console.log(blockScopedConst); // ❌ ReferenceError: blockScopedConst is not defined
 
-  for (var i = 0; i < 3; i++) {
-    var funcScopedInsideLoop = "I'm still function-scoped (var)";
-    let blockScopedInsideLoop = `Block-scoped in iteration ${i} (let)`;
-    const blockScopedConstInsideLoop = `Block-scoped in iteration ${i} (const)`;
+//   for (var i = 0; i < 3; i++) {
+//     var funcScopedInsideLoop = "I'm still function-scoped (var)";
+//     let blockScopedInsideLoop = `Block-scoped in iteration ${i} (let)`;
+//     const blockScopedConstInsideLoop = `Block-scoped in iteration ${i} (const)`;
 
-    console.log("Inside loop:", blockScopedInsideLoop);
-    console.log("Inside loop:", blockScopedConstInsideLoop);
-  }
+//     console.log("Inside loop:", blockScopedInsideLoop);
+//     console.log("Inside loop:", blockScopedConstInsideLoop);
+//   }
 
-  console.log(funcScopedInsideLoop); // ✅ Accessible: "I'm still function-scoped (var)"
-  // console.log(blockScopedInsideLoop); // ❌ ReferenceError: blockScopedInsideLoop is not defined
-  // console.log(blockScopedConstInsideLoop); // ❌ ReferenceError: blockScopedConstInsideLoop is not defined
+//   console.log(funcScopedInsideLoop); // ✅ Accessible: "I'm still function-scoped (var)"
+//   // console.log(blockScopedInsideLoop); // ❌ ReferenceError: blockScopedInsideLoop is not defined
+//   // console.log(blockScopedConstInsideLoop); // ❌ ReferenceError: blockScopedConstInsideLoop is not defined
 
-  // Using var in a loop creates an unexpected behavior:
-  console.log("Loop counter after the loop (var):", i); // ✅ Accessible: 3
+//   // Using var in a loop creates an unexpected behavior:
+//   console.log("Loop counter after the loop (var):", i); // ✅ Accessible: 3
 
-  // Block-level shadowing
-  let outerLet = "I'm outer (let)";
-  {
-    let outerLet = "I'm inner (let, shadowing outerLet)";
-    console.log(outerLet); // ✅ Accessible: "I'm inner (let, shadowing outerLet)"
-  }
-  console.log(outerLet); // ✅ Accessible: "I'm outer (let)"
+//   // Block-level shadowing
+//   let outerLet = "I'm outer (let)";
+//   {
+//     let outerLet = "I'm inner (let, shadowing outerLet)";
+//     console.log(outerLet); // ✅ Accessible: "I'm inner (let, shadowing outerLet)"
+//   }
+//   console.log(outerLet); // ✅ Accessible: "I'm outer (let)"
 
-  // Hoisting quirk with var
-  console.log(hoistedVar); // ✅ Undefined (due to hoisting)
-  // console.log(hoistedLet); // ❌ ReferenceError: Cannot access 'hoistedLet' before initialization
-  var hoistedVar = "I was hoisted (var)";
-  let hoistedLet = "I was not hoisted (let)";
+//   // Hoisting quirk with var
+//   console.log(hoistedVar); // ✅ Undefined (due to hoisting)
+//   // console.log(hoistedLet); // ❌ ReferenceError: Cannot access 'hoistedLet' before initialization
+//   var hoistedVar = "I was hoisted (var)";
+//   let hoistedLet = "I was not hoisted (let)";
+// }
+
+// trickyScopeExample();
+
+
+// function outerBox(){
+//   let sercet = "hello"
+//   function innerBox() {
+//     console.log(sercet);
+//     let a = 0;
+    
+//   }
+//   innerBox()
+// }
+
+// outerBox
+
+
+// function higherOrderFunc(callback) {
+//   console.log("exctution od higher order func");
+//   callback("zaynab");
+// }
+
+// function argumentFuc(namee) {
+//   console.log(`im ${namee}`);
+// }
+
+// higherOrderFunc(argumentFuc)
+
+
+// // Higher Order Function that accepts a callback function
+// function higherOrderFunction(callback) {
+//   // Performing some operations
+//   console.log("Executing the higher order function...");
+
+//   // Calling the callback function
+//   callback();
+// }
+
+// // Callback function to be passed to the higher order function
+// function callbackFunction() {
+//   console.log("Executing the callback function...");
+// }
+
+// // Calling the higher order function with the callback function as argument
+// higherOrderFunction(callbackFunction);
+
+
+// function createsGreeter(greeting) {
+//   return function cller(namee) {
+//     console.log(`${greeting} to ${namee}`);
+    
+//   }
+// }
+
+// const greeting = createsGreeter("hello")
+// greeting("ali")
+
+
+function performOperationOnArray(array, operation) {
+  return array.map(operation)
 }
 
-trickyScopeExample();
+function doubler(e) {
+  return e*2
+}
+
+const nums = [1, 2, 3, 4]
+const doublednum = performOperationOnArray(nums, doubler)
+console.log(doublednum);
