@@ -303,14 +303,36 @@ for (let score of scores) {
 // greeting("ali")
 
 
-function performOperationOnArray(array, operation) {
-  return array.map(operation)
+// function performOperationOnArray(array, operation) {
+//   return array.map(operation)
+// }
+
+// function doubler(e) {
+//   return e*2
+// }
+
+// const nums = [1, 2, 3, 4]
+// const doublednum = performOperationOnArray(nums, doubler)
+// console.log(doublednum);
+
+//
+// function perfomeFilter(array, condition){
+//   return array.filter(condition)
+
+// } 
+
+
+// const nums = [1,2,4,5,6,7]
+// const filtered = perfomeFilter(nums, (e) => e >= 3)
+// console.log(filtered);
+
+function processArray(arr, operation) {
+  return operation.reduce((acc, operation) => operation(acc), arr)
 }
 
-function doubler(e) {
-  return e*2
-}
-
-const nums = [1, 2, 3, 4]
-const doublednum = performOperationOnArray(nums, doubler)
-console.log(doublednum);
+const numbers = [1, 2, 3, 4, 5];
+const result = processArray(numbers, [
+  arr => arr.map(num => num * 2),
+  arr => arr.filter(num => num>3)
+])
+console.log(result);
