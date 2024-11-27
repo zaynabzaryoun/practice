@@ -319,20 +319,42 @@ for (let score of scores) {
 // function perfomeFilter(array, condition){
 //   return array.filter(condition)
 
-// } 
+// }
 
 
 // const nums = [1,2,4,5,6,7]
 // const filtered = perfomeFilter(nums, (e) => e >= 3)
 // console.log(filtered);
 
-function processArray(arr, operation) {
-  return operation.reduce((acc, operation) => operation(acc), arr)
-}
+// function processArray(arr, operations) {
+//   return operations.reduce((acc, operation) => operation(acc), arr)
+// }
 
-const numbers = [1, 2, 3, 4, 5];
-const result = processArray(numbers, [
-  arr => arr.map(num => num * 2),
-  arr => arr.filter(num => num>3)
-])
-console.log(result);
+// const numbers = [1, 2, 3, 4, 5];
+// const result = processArray(numbers, [
+//   arr => arr.map(num => num * 2),
+//   arr => arr.filter(num => num % 3 === 0)
+// ])
+// console.log(result);
+
+//reusability
+// function filterArray(arr, condition) {
+//  return arr.filter(condition)
+// }
+
+// const array = [1, 2, 3, 4, 5, 6]
+// const even = filterArray(array, e => !(e % 2))
+// console.log(even);
+
+//modularity
+// function perfomOnArray(arr, operations) {
+//   return operations.reduce((acc, op)=> op(acc), arr)
+// }
+
+// const nums = [1, 2, 3, 4, 5]
+// let newArr = perfomOnArray(nums, [
+//   array=>array.map(e => e * 2),
+//   array=>array.filter(e=> e%3===0)
+// ])
+
+// console.log(newArr);
