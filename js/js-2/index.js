@@ -382,3 +382,13 @@ function show() {
 }
 
 show();
+
+
+
+function show() {
+  console.log(this === window); // true
+}
+
+show();
+
+window.show();
