@@ -358,3 +358,37 @@ for (let score of scores) {
 // ])
 
 // console.log(newArr);
+
+
+let counter = {
+  count: 0,
+  next: function () {
+    return ++this.count;
+  },
+};
+
+counter.next();
+
+//global
+console.log(this === window); // true
+
+
+this.color= 'Red';
+console.log(window.color); // 'Red'
+
+
+function show() {
+  console.log(this === window); // true
+}
+
+show();
+
+
+
+function show() {
+  console.log(this === window); // true
+}
+
+show();
+
+window.show();
