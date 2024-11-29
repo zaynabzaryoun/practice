@@ -360,35 +360,64 @@ for (let score of scores) {
 // console.log(newArr);
 
 
-let counter = {
-  count: 0,
-  next: function () {
-    return ++this.count;
+// let counter = {
+//   count: 0,
+//   next: function () {
+//     return ++this.count;
+//   },
+// };
+
+// counter.next();
+
+// //global
+// console.log(this === window); // true
+
+
+// this.color= 'Red';
+// console.log(window.color); // 'Red'
+
+
+// function show() {
+//   console.log(this === window); // true
+// }
+
+// show();
+
+
+
+// function show() {
+//   console.log(this === window); // true
+// }
+
+// show();
+
+// window.show();
+
+
+
+// let person = {
+//   firstName: 'John',
+//   lastName: 'Doe'
+// };
+
+// person.greet = function () {
+//   console.log('Hello!');
+// }
+
+// person.greet();
+
+
+let person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  greet: function () {
+      console.log('Hello, World!');
   },
+  getFullName: function () {
+      return this.firstName + ' ' + this.lastName;
+  }
 };
 
-counter.next();
 
-//global
-console.log(this === window); // true
+console.log(person.getFullName());
 
-
-this.color= 'Red';
-console.log(window.color); // 'Red'
-
-
-function show() {
-  console.log(this === window); // true
-}
-
-show();
-
-
-
-function show() {
-  console.log(this === window); // true
-}
-
-show();
-
-window.show();
