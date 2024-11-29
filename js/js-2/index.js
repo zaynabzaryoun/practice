@@ -420,3 +420,4 @@ let person = {
 
 
 console.log(person.getFullName());
+
