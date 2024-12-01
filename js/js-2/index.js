@@ -358,7 +358,7 @@ for (let score of scores) {
 // ])
 
 // console.log(newArr);
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // let counter = {
 //   count: 0,
@@ -407,17 +407,46 @@ for (let score of scores) {
 // person.greet();
 
 
-let person = {
-  firstName: 'John',
-  lastName: 'Doe',
-  greet: function () {
-      console.log('Hello, World!');
-  },
-  getFullName: function () {
-      return this.firstName + ' ' + this.lastName;
-  }
-};
+// let person = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   greet: function () {
+//       console.log('Hello, World!');
+//   },
+//   getFullName: function () {
+//       return this.firstName + ' ' + this.lastName;
+//   }
+// };
 
 
-console.log(person.getFullName());
+// console.log(person.getFullName());
+///////////////////////////////////////////////////////////////////////////////
 
+
+
+const users = [
+  { id: 1, name: "Alice", age: 25, city: "New York" },
+  { id: 2, name: "Bob", age: 30, city: "San Francisco" },
+  { id: 3, name: "Charlie", age: 35, city: "Los Angeles" }
+];
+//Uses map to transform the array.
+// Extracts the name and city properties using destructuring.
+// Includes the remaining properties (id and age) in a nested object using the rest operator.
+// Returns an array of objects in the following format:
+// [
+//   { name: "Alice", city: "New York", details: { id: 1, age: 25 } },
+//   { name: "Bob", city: "San Francisco", details: { id: 2, age: 30 } },
+//   { name: "Charlie", city: "Los Angeles", details: { id: 3, age: 35 } }
+// ]
+
+function transfrom(array) {
+  const arr = []
+  const newArr = array.map(({ name, city }) => {
+  console.log(name, city)
+  })
+  console.log(newArr);
+  // return newArr
+}
+
+transfrom(users)
+// console.log(newArr);
