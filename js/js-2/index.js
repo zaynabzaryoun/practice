@@ -440,13 +440,12 @@ const users = [
 // ]
 
 function transfrom(array) {
-  const arr = []
   const newArr = array.map(({ name, city }) => {
   console.log(name, city)
   })
-  console.log(newArr);
-  // return newArr
+  
+  return newArr
 }
 
 transfrom(users)
-console.log(newArr);
+console.log(transfrom(users));
