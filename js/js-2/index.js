@@ -449,4 +449,4 @@ function transfrom(array) {
 }
 
 transfrom(users)
-// console.log(newArr);
+console.log(newArr);
