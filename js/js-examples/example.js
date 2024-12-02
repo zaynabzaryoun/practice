@@ -520,9 +520,38 @@
 // console.log(result2.max);
 
 
+//////////////////////////////////////////////////////- 16 -//////////////////////////////////////////////////////////////
+
+// You have an array of objects representing students. Each student object has the following properties: name (a string) and score (a number). Your task is to create a new array that contains the names of students who have scored above 50, and then return that array in uppercase letters.
 
 
+const students = [  
+  { name: "Alice", score: 45 },  
+  { name: "Bob", score: 80 },  
+  { name: "Charlie", score: 55 },  
+  { name: "David", score: 30 },  
+  { name: "Eva", score: 65 }  
+];
 
+const arr = []
+const studentsName = students.map(student => {
+  if (student.score > 50) {
+    console.log(student.name.toUpperCase());
+    return student.name.toUpperCase();
+  } else {
+    return undefined
+  }
+
+}).filter(name => name!==undefined)
+
+// console.log(studentsName);
+
+
+const names = students.filter((student) => {
+ return student.score > 50
+}).map(e=>e.name.toUpperCase())
+
+console.log(names);
 
 
 
