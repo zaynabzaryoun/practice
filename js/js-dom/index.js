@@ -27,8 +27,6 @@
 // const data = lisArray.map(item => item.textContent)
 // console.log(data);
 
-
-
 // const element = document.querySelectorAll("li")
 // console.log(element);
 // let prant = element.parentNode
@@ -37,11 +35,9 @@
 // const data = Array.of(...elements).map(e => e.textContent)
 // console.log(data);
 
-
 // let note = document.querySelector(".note");
 // console.log(note);
 // console.log(note.parentNode);
-
 
 // let node = document.querySelector(".current")
 // // let nextSibling = node.nextSibling
@@ -53,17 +49,14 @@
 // while (previos) {
 //     console.log(previos);
 //     previos = previos.previousElementSibling
-    
-// }
 
+// }
 
 // while (nextSiblingElment) {
 //     console.log(nextSiblingElment);
 //     // nextSiblingElment = nextSiblingElment.nextElementSibling
 //     node = node.nextElementSibling
 // }
-
-
 
 // let content = document.getElementById("menu")
 // let firstChile = content.firstChild
@@ -73,5 +66,129 @@
 // let children2 = content.children
 // console.log(children2);
 
- 
+///////////////////////////////////////////////////////////////
 
+// const div = document.createElement("div")
+// // div.innerHTML = "<p>im a p inside a div</p>"
+// const text = document.createTextNode("im a text node inside a div")
+// div.appendChild(text)
+// document.body.appendChild(div)
+// div.id = "div-id"
+// div.className = "div-class"
+// const p = document.createElement("p")
+// div.appendChild(p)
+// p.innerText = "im a new p"
+
+// const ul = document.createElement("ul")
+// document.body.appendChild(ul)
+// ul.id = "menu"
+// ul.innerHTML = "<li>Home</li>"
+
+// const li1 = document.createElement("li")
+// const li2 = document.createElement("li")
+
+// li1.textContent = "products"
+// li2.textContent= "about us"
+
+// ul.appendChild(li1)
+// ul.appendChild(li2)
+
+// function createMenuItem(text) {
+//     let li = document.createElement("li")
+//     ul.appendChild(li)
+//     li.textContent = text
+//     return li
+// }
+
+// // console.log(createMenuItem("tea"));
+
+// createMenuItem("11")
+// createMenuItem("22")
+// createMenuItem("33")
+
+// const firstList = document.querySelector("#first-list")
+// const firstLi = firstList.firstElementChild;
+// console.log(firstLi);
+// const secondList = document.querySelector("#second-list")
+// secondList.appendChild(firstLi)
+
+// const div = document.querySelector("#note");
+// // const content = div.textContent
+// const content = div.innerText;
+// console.log(content);
+
+// const userInput = '<img src="ww" onerror="alert(`hacked`)">'
+
+// document.body.innerHTML = userInput
+
+// const p = document.querySelector("p")
+// const h1 = document.createElement("h1")
+// p.before(h1)
+// h1.textContent= "hll"
+
+// const ul = document.querySelector("ul")
+// const firstLi = ul.firstElementChild
+
+// const strings = ["home", "about us", "contact us"]
+// const liArray = strings.map(s => {
+//     const li = document.createElement("li")
+//     // firstLi.before(li)
+//     li.textContent = s
+//     return li
+// })
+// console.log(liArray);
+
+// firstLi.before(...liArray)
+
+// const button = document.querySelector("button")
+// button.before("hrloooo", "ghhhhh")
+// button.after("bye", " after")
+// console.log(typeof button);
+// const p = document.createElement("p")
+// p.textContent = "after tezt"
+// button.after(p)
+// const libs = ['React', 'Meteor', 'Polymer'];
+// const arr = libs.map(lib => {
+//     const li = document.createElement("li")
+//     console.log(lib);
+    
+//     li.textContent = lib
+//     return li
+// })
+// console.log(arr);
+
+// button.after(...arr)
+// element.inserAdjacentHTML(position, html)
+//html: what you eant to add
+//beforebegin, afterbegin, beforeend, afterend
+
+// const p = document.querySelector("#demo")
+// const h1 = document.createElement("h1")
+// h1.textContent = "gg"
+// p.insertAdjacentHTML("beforebegin", "<h1>before element</h1>")
+// p.insertAdjacentHTML("afterbegin", "first child of element is text node")
+// p.insertAdjacentHTML("beforeend", "<h5>last child of element</h5>")
+// p.insertAdjacentHTML("afterend", "<h6>after the element</h6>")
+// p.insertAdjacentHTML("afterbegin", h1)
+// p.innerHTML = "<h1>HELLO</h1>"
+
+
+const menu = document.querySelector("#menu")
+// const newOne = document.createElement("li")
+// newOne.textContent = "new"
+// const firstChild = menu.firstElementChild
+// console.log(firstChild);
+
+// menu.replaceChild(newOne, firstChild)
+// menu.removeChild(menu.lastElementChild)
+
+
+let langs = ['TypeScript', 'HTML', 'CSS'];
+const arr = langs.map(lang => {
+    const li = document.createElement("li")
+    li.textContent = lang
+    // menu.append(li)
+    return li
+})
+
+menu.append(...arr)
