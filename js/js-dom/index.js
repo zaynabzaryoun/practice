@@ -234,10 +234,56 @@ const menu = document.querySelector("#menu")
     // const div = document.querySelector(".parent")
     // console.log(div.attributes);
     
-    // const input = document.querySelector("input")
-// input.removeAttribute("disabled")
-// console.log(input.attributes);
-// console.log(input.hasAttribute("disabled"));
+    // input.removeAttribute("disabled")
+    // console.log(input.attributes);
+    // console.log(input.hasAttribute("disabled"));
+    
+    
+    //////////////////////////////////////////////////
+    // element.style  cssstyledeclaration
+// const input = document.querySelector("input")
+// console.log(input.style);
+// input.style.color = "green"
+// input.style["border-bottom-color"] = "yellow"
+// // input.style.cssText = "color: blue; background-color: red"
+// input.setAttribute("style", "color: 'blue'; background-color: purple")
+
+
+// let message = document.querySelector('.message');
+// let style = getComputedStyle(message)
+// console.log(style.color);
+
+
+// let menuu = document.querySelector('#menu');
+// // console.log(menuu.className);
+// // menuu.className += " new"
+// // console.log(menuu.className);
+// menuu.classList.add("new")
+// console.log(menuu.className);
+// menuu.classList.remove("new")
+// // console.log(menuu.className);
+// // console.log(menuu.classList);
+// menuu.classList.replace("new", "neweeet")
+// console.log(menuu.classList);
+// console.log(menuu.classList.contains("vertical"));
+// //menuu.classList.toggle()
+
+// let box = document.querySelector('.box');
+// let width = box.offsetWidth;
+// let height = box.offsetHeight;
+// console.log({ width, height });
+
+// const domRect = box.getBoundingClientRect();
+// console.log(domRect);
+
+let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+let height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+console.log(width);
+console.log(height);
+
+
+
+
     
     
 
