@@ -183,12 +183,69 @@ const menu = document.querySelector("#menu")
 // menu.removeChild(menu.lastElementChild)
 
 
-let langs = ['TypeScript', 'HTML', 'CSS'];
-const arr = langs.map(lang => {
-    const li = document.createElement("li")
-    li.textContent = lang
-    // menu.append(li)
-    return li
-})
+// let langs = ['TypeScript', 'HTML', 'CSS'];
+// const arr = langs.map(lang => {
+//     const li = document.createElement("li")
+//     li.textContent = lang
+//     // menu.append(li)
+//     return li
+// })
 
-menu.append(...arr)
+// menu.append(...arr)
+
+// const input = document.querySelector(".type")
+// console.log(input.getAttribute("type"));
+// console.log(input.type);
+
+// const input = document.querySelector('input');
+
+// //change the attribue:
+// input.setAttribute("value", "bye")
+// console.log(input.value);
+
+// // Change the property
+// input.value = "world"
+// console.log(input.getAttribute("value"));
+
+
+// const button = document.getElementById('myButton');
+// console.log(button.getAttribute("disabled"));
+// console.log(button.disabled);
+// button.removeAttribute("disabled")
+// console.log(button.disabled);
+
+// console.log(typeof input.attributes);
+// for (let attr of input.attributes) {
+    //     console.log(`name: ${attr.name} and value: ${attr.value}`);
+    
+    // }
+    
+    // input.setAttribute("tabindex", 2)
+    // console.log(input.getAttribute("tabindex"));
+    // console.log(input.tabIndex);
+    // input.tabIndex = 2
+    // console.log(input.getAttribute("tabIndex"));
+    
+    // console.log(typeof input.getAttribute("style"));
+    // console.log(input.style);
+    // console.dir(input.style);
+    // console.log(input.style);
+    
+    // const div = document.querySelector(".parent")
+    // console.log(div.attributes);
+    
+    // const input = document.querySelector("input")
+// input.removeAttribute("disabled")
+// console.log(input.attributes);
+// console.log(input.hasAttribute("disabled"));
+    
+    
+
+
+
+
+
+
+
+
+
