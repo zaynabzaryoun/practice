@@ -276,18 +276,83 @@ const menu = document.querySelector("#menu")
 // const domRect = box.getBoundingClientRect();
 // console.log(domRect);
 
-let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-let height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-console.log(width);
-console.log(height);
+// let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+// let height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+// console.log(width);
+// console.log(height);
+
+/////////////////////////////////////////////////////////////////
+// const btn = document.querySelector("#btn")
+
+// const handleClick = () => {
+//     alert(`helllo`)
+// }
+// btn.addEventListener("click", handleClick)
 
 
+// btn.addEventListener("click", function () {
+//     alert("heloo")
+// })
+
+// btn.addEventListener("click", (event) => {
+//     console.log(event.target);
+    
+// })
 
 
+// btn.onclick = function (e) {
+//     alert(e)
+//     console.log(this.id);
+    
+// }
+
+// btn.onclick=null
+
+// function handleClick() {
+//     console.log("this", this);
+    
+//     alert("clicked")
+    
+// }
+
+// btn.addEventListener("click",handleClick)
+
+// btn.addEventListener("click", (event) => {
+//     alert(event.type)
+// })
+// btn.removeEventListener("click", () => {
+//     console.log("this", this);
+    
+//     alert("clicked")
+// })
+// btn.removeEventListener("click", handleClick)
     
     
 
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.querySelector("#btn")
+    console.log(btn);
+    
+    console.log("the dom and tree are fully loaded");
+    
+})
 
+window.addEventListener("load", () => {
+    console.log("the page is fully loaded");
+    
+})
+
+document.addEventListener("beforeunload", (event) => {
+    event.preventDefault();
+    event.raturnValue =""
+    alert("are you sure you want to leave the page?")
+    
+})
+
+document.addEventListener("unload", () => {
+    console.log("unload");
+    
+})
 
 
 
