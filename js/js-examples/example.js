@@ -554,7 +554,51 @@ const names = students.filter((student) => {
 console.log(names);
 
 
+//////////////////////////////////////////////////////- 17 -//////////////////////////////////////////////////////////////
+// event
+//when you click a button show a message explaining which button is been clicked.
+//create a div with ele class for html.
+const el = document.querySelector(".ele")
+el.addEventListener("contextmenu", (e) => {
+  e.preventDefault()
+})
 
+let message = document.createElement("p")
+document.body.appendChild(message)
+
+el.addEventListener("mouseup", (e) => {
+  // console.log(e.button);
+  switch (e.button) {
+      case 0: 
+         message.textContent = "left button"
+          break;
+      case 1:
+          message.textContent = "scroll wheel"
+          break
+      case 2:
+          message.textContent = "right button"
+          break 
+      default:
+          console.log("unknown");
+          break;
+  }
+})
+
+
+//////////////////////////////////////////////////////- 18 -//////////////////////////////////////////////////////////////
+// event
+//show position of mouse (x, y) on your screen
+// pay attention to the difference between screenX and clientX.
+//screenX: shows horizonal postion of mouse according to screen of device. left top of screen is x,y=[0, 0]
+//clientX: shows horizonal position of mouse according to your borwser's viewport. left top of browser is x,y=[0,0]
+
+//answer:
+// const p = document.createElement("p")
+// document.body.appendChild(p)
+// window.addEventListener("mousemove", (e) => {
+//     p.textContent = `[screenX: ${e.screenX}, screenY: ${e.screenY}] - [clientX: ${e.clientX}, clientY: ${e.clientY}]`
+    
+// })
 
 
 
