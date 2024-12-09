@@ -439,13 +439,17 @@ const users = [
 //   { name: "Charlie", city: "Los Angeles", details: { id: 3, age: 35 } }
 // ]
 
-function transfrom(array) {
-  const newArr = array.map(({ name, city }) => {
-  console.log(name, city)
-  })
+// function transfrom(array) {
+//   const newArr = array.map(({ name, city, ...details }) => {
+//   return name, city, details
+//   })
   
-  return newArr
-}
+//   return newArr
+// }
 
-transfrom(users)
-console.log(transfrom(users));
+// // transfrom(users)
+// console.log(transfrom(users));
+
+
+
+
