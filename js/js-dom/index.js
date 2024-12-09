@@ -329,34 +329,106 @@ const menu = document.querySelector("#menu")
     
     
 
-document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.querySelector("#btn")
-    console.log(btn);
+// document.addEventListener("DOMContentLoaded", () => {
+//     const btn = document.querySelector("#btn")
+//     console.log(btn);
     
-    console.log("the dom and tree are fully loaded");
+//     console.log("the dom and tree are fully loaded");
     
-})
+// })
 
-window.addEventListener("load", () => {
-    console.log("the page is fully loaded");
+// window.addEventListener("load", () => {
+//     console.log("the page is fully loaded");
     
-})
+// })
 
-document.addEventListener("beforeunload", (event) => {
-    event.preventDefault();
-    event.raturnValue =""
-    alert("are you sure you want to leave the page?")
+// document.addEventListener("beforeunload", (event) => {
+//     event.preventDefault();
+//     event.raturnValue =""
+//     alert("are you sure you want to leave the page?")
     
-})
+// })
 
-document.addEventListener("unload", () => {
-    console.log("unload");
+// document.addEventListener("unload", () => {
+//     console.log("unload");
     
-})
+// })
+
+//mouse events
+const el = document.querySelector(".ele")
+// el.addEventListener("mousedown", ()=>{
+//     console.log("mousedown");
+// })
+
+// el.addEventListener("mouseup", () => {
+//     console.log("mouseup!!");
+    
+// })
+
+// el.addEventListener("click", (e) => {
+//     console.log("clicked", e.button);
+    
+// })
+
+// el.addEventListener("dblclick", () =>{
+//     console.log("db");
+    
+// })
+
+// el.addEventListener("mouseover", () => {
+//     console.log("mouse move");
+    
+// })
+// el.onmouseout = () =>{
+//     console.log("mouse out");
+    
+// }
+
+// el.onmouseenter = () => {
+//     console.log("enter");
+    
+// }
 
 
+// el.addEventListener("contextmenu", (e) => {
+//     e.preventDefault()
+// })
+
+// let message = document.createElement("p")
+// document.body.appendChild(message)
+    
+// el.addEventListener("mouseup", (e) => {
+    
+//     switch (e.button) {
+//         case 0:
+//            message.textContent = "left button"
+//             break;
+//         case 1:
+//             message.textContent = "scroll wheel"
+//             break
+//         case 2:
+//             message.textContent = "right button"
+//             break
+//         default:
+//             console.log("unknown");
+//             break;
+//     }
+
+// })
 
 
-
-
+// el.addEventListener("click", (e) => {
+//     console.log("ctrl", e.ctrlKey);
+//     console.log("shift", e.shiftKey);
+//     console.log("alt", e.altKey);
+//     console.log("windows" , e.metaKey);
+    
+// })
+// const p = document.createElement("p")
+// document.body.appendChild(p)
+// window.addEventListener("mousemove", (e) => {
+//     p.textContent = `[screenX: ${e.screenX}, screenY: ${e.screenY}] - [clientX: ${e.clientX}, clientY: ${e.clientY}]`
+    
+  
+// })
 
