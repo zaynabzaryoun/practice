@@ -15,6 +15,20 @@ const msg = document.createElement("p")
 parent.appendChild(msg)
 msg.classList.add("msg");
 
+const rightArrow = document.querySelector(".fa-arrow-right")
+const downArrow = document.querySelector(".fa-arrow-down")
+
+function showArrow() {
+    if (window.innerWidth < 450) {
+        rightArrow.classList.add("hidden")
+        downArrow.classList.remove("hidden")
+    } else {
+        downArrow.classList.add("hidden") 
+        rightArrow.classList.remove("hidden")
+    }
+}
+showArrow()
+
 div.addEventListener("mouseover", () => {
     let color = createColor();
     div.style.backgroundColor = color
@@ -26,6 +40,8 @@ div.addEventListener("mouseout", () => {
     div.style.backgroundColor = "rgb(255,255,255)"
     msg.style.color = "white"
 })
+
+window.addEventListener("resize", showArrow)
 
 
 function createColor() {
