@@ -6,6 +6,7 @@ function showBars() {
     barIcon.classList.remove("hidden")
 } else {
     barIcon.classList.add("hidden")
+    // list.classList.add("hidden"); 
 }
 }
 
@@ -25,7 +26,7 @@ function showMenu() {
     }
 }
 
-showMenu()
+// showMenu()
 barIcon.addEventListener("click", () => {
     if (window.innerWidth < 450 && list.classList.contains("hidden")) {
         list.classList.remove("hidden")
