@@ -1,3 +1,5 @@
+/*************************************************- ✔️ 1 -**********************************************************************/
+
 // function startCountdown(seconds) {
 //     const interval = setInterval(() => {
 //         console.log("count down", seconds);
@@ -11,10 +13,54 @@
 // startCountdown(4)
 
 
+// function countDown(t) {
+//   const interval = setInterval(() => {
+//     while (t >= 0) {
+//       console.log(t);
+//       t--;
+//     }
+//     clearInterval(interval)
+    
+//   }, 1000)
+// }
 
-/*************************************************- 2 -**********************************************************************/
+// countDown(4)
+
+
+
+
+/*************************************************- ✔️ 2 -**********************************************************************/
 
 //2- Write a function that takes an array of numbers and returns a new array containing only the even numbers from the input array.
+
+// const array =[1,2,3,4,5,6,7,8]
+
+// function evenNums(arr) {
+//   return arr.filter(n => !(n%2))
+// }
+
+// console.log(evenNums(array))
+
+
+///////// squar numbers
+
+// const array =[1,2,3,4,5,6,7,8]
+// function squareNumbers(numbers) {
+//   return numbers.map(num => num**2)
+// }
+
+// console.log(squareNumbers(array));
+///////////
+// const newArr=[]
+// function squareNumbers(numbers) {
+//   numbers.forEach(b => {
+//     newArr.push(b*b)
+//   })
+//   return newArr
+// }
+// console.log(squareNumbers(array));
+
+///////////
 
 // function squareNumbers(arr) {
 //     const newArr =  []
@@ -30,7 +76,7 @@
 // console.log(squareNumbers([1, "g", 3, 4]));
 // console.log(squareNumbers([-1, -2, 0, 2]));
 
-/****************************************************- 3 -***************************************************************/
+/****************************************************-  3 -***************************************************************/
 //3- Write a function that takes an array of strings and groups the anagrams together. An anagram is a word that can be formed by rearranging the letters of another. The function should return an array of arrays, where each inner array contains words that are anagrams of each other.
 
 
@@ -51,8 +97,18 @@
 
 // console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
 
-/***************************************************- 4 -********************************************************/
+/***************************************************- ✔️ 4 -********************************************************/
 //4- Write a function that takes an array of numbers and returns the sum of all the even numbers in the array.
+/////////
+const arrr = [1, 2, 3, 4, 5, 6]
+
+// function sumOfEvens(numbers) {
+  // const evens = numbers.filter(n => !(n % 2))
+  // return evens.reduce((acc, cur)=> acc+cur, 0)
+// }
+// console.log(sumOfEvens(arrr));
+
+
 
 
 //solution 1:
@@ -558,31 +614,8 @@ console.log(names);
 // event
 //when you click a button show a message explaining which button is been clicked.
 //create a div with ele class for html.
-const el = document.querySelector(".ele")
-el.addEventListener("contextmenu", (e) => {
-  e.preventDefault()
-})
+// 
 
-let message = document.createElement("p")
-document.body.appendChild(message)
-
-el.addEventListener("mouseup", (e) => {
-  // console.log(e.button);
-  switch (e.button) {
-      case 0: 
-         message.textContent = "left button"
-          break;
-      case 1:
-          message.textContent = "scroll wheel"
-          break
-      case 2:
-          message.textContent = "right button"
-          break 
-      default:
-          console.log("unknown");
-          break;
-  }
-})
 
 
 //////////////////////////////////////////////////////- 18 -//////////////////////////////////////////////////////////////
