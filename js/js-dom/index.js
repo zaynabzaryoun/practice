@@ -432,3 +432,126 @@ const el = document.querySelector(".ele")
   
 // })
 
+
+
+// const input = document.querySelector("#text")
+
+// input.addEventListener("keypress", (event) => {
+//     console.log(event.code);
+//     console.log(event.key);
+    
+// })
+
+
+// //how to register scroll event:
+// //1: calling addeventlIstener method on targeted element
+// targetElement.addEventlistener((event), () => {
+    
+// })
+
+// //2:assign event handler to onscroll proert of targeted element
+// targetElement.onScroll = (event) => {
+    
+// }
+
+// document.body.style.height = "2000px"
+
+// window.addEventListener(("scroll"), (e) => {
+//     console.log("scrolling", window.scrollY);
+//     console.log("scrolling", window.pageYOffset);
+    
+// })
+
+// window.onscroll = function (e) {
+//     console.log("scrolling", e);
+// }
+
+
+// const myMenu = document.querySelector(".menu")
+
+// myMenu.addEventListener("click", (e) => {
+//     console.log(e.target);
+//     switch (e.target.className) {
+//         case "home":
+//             console.log("home is clicked");
+//             break
+//         case "about":
+//             console.log("about is clicked");
+//             break
+//         case "contacts":
+//             console.log("contacts is clicked");
+//     }
+    
+// })
+
+
+//mutationObserver: showing changes made to dom tree
+
+// function callback(mutatios) {
+//     //
+// }
+
+// const observer = new MutationObserver(callback)
+// observer.observe(targetedNode, observerOptions)
+
+// observer.disconnect()
+
+
+(function () {
+    // selecting the list
+    let list = document.querySelector('#language');
+
+    // selecting the buttons
+    let btnAdd = document.querySelector('#btnAdd');
+    let btnRemove = document.querySelector('#btnRemove');
+    let btnStart = document.querySelector('#btnStart');
+
+    // disable the stop button
+    let btnStop = document.querySelector('#btnStop');
+    btnStop.disabled = true;
+
+    function log(mutations) {
+        for (let mutation of mutations) {
+            if (mutation.type === 'childList') {
+                console.log(mutation);
+            }
+        }
+    }
+
+    let observer = new MutationObserver(log);
+
+    btnStart.addEventListener('click', function () {
+        observer.observe(list, {
+            childList: true
+        });
+
+        btnStart.disabled = true;
+        btnStop.disabled = false;
+    });
+
+    btnStop.addEventListener('click', function () {
+        observer.disconnect();
+
+        // Set the button state
+        btnStart.disabled = false;
+        btnStop.disabled = true;
+    });
+
+    let counter = 1;
+    btnAdd.addEventListener('click', function () {
+        // create a new item element
+        let item = document.createElement('li');
+        item.textContent = `Item ${counter++}`;
+
+        // append it to the child nodes of list
+        list.appendChild(item);
+    });
+
+    btnRemove.addEventListener('click', function () {
+        list.lastElementChild ?
+            list.removeChild(list.lastElementChild) :
+            console.log('No more child node to remove');
+    });
+
+})();
+
