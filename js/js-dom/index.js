@@ -741,16 +741,29 @@ const el = document.querySelector(".ele")
 // }
 
 
+// const btn = document.querySelector("#btn")
+// btn.addEventListener("click", (e) => {
+// 	const checkboxs = document.querySelectorAll("input:checked")
+// 	console.log(checkboxs);
+// 	let value = []
+// 	checkboxs.forEach(e => {
+// 		value.push(e.value);
+// 	})
+// 	alert(value)
+// 	console.log(value);
+	
+	
+// })
+
+
 const btn = document.querySelector("#btn")
-btn.addEventListener("click", (e) => {
-	const checkboxs = document.querySelectorAll("input:checked")
-	console.log(checkboxs);
-	let value = []
-	checkboxs.forEach(e => {
-		value.push(e.value);
-	})
-	alert(value)
-	console.log(value);
-	
-	
+btn.addEventListener("click", () => {
+    const checkboxs = document.querySelectorAll("input")
+    checkboxs.forEach(e => {
+        console.log(checked);
+        
+        
+    })
+
 })
+
