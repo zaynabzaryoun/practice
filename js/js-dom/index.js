@@ -765,14 +765,30 @@ const el = document.querySelector(".ele")
 
 // })
 
-const checkbox = document.createElement("input")
-checkbox.setAttribute("type", "checkbox")
-checkbox.setAttribute("id", "color")
+// const checkbox = document.createElement("input")
+// checkbox.setAttribute("type", "checkbox")
+// checkbox.setAttribute("id", "color")
 
-const label = document.createElement("label")
-label.for = "color"
-label.textContent = "color: "
+// const label = document.createElement("label")
+// label.for = "color"
+// label.textContent = "color: "
 
-document.body.append(label)
-document.body.append(checkbox)
+// document.body.append(label)
+// document.body.append(checkbox)
+
+
+const colors = ["Red", "Green", "Blue"];
+colors.map(color => {
+    const label = document.createElement("label")
+    const input = document.createElement("input")
+    input.setAttribute("type", "checkbox")
+
+    document.body.append(label)
+    document.body.append(input)
+
+    label.textContent = color
+    label.for = color
+    input.id = color
+})
+
 
