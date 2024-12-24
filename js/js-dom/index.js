@@ -756,14 +756,23 @@ const el = document.querySelector(".ele")
 // })
 
 
-const btn = document.querySelector("#btn")
-btn.addEventListener("click", () => {
-    const checkboxs = document.querySelectorAll("input")
-    checkboxs.forEach(e => {
-        console.log(checked);
-        
-        
-    })
+// const btn = document.querySelector("#btn")
+// btn.addEventListener("click", () => {
+//     const checkboxs = document.querySelectorAll("input[type='checkbox']")
+//     checkboxs.forEach(e => {
+//         e.checked = !(e.checked)
+//     })
 
-})
+// })
+
+const checkbox = document.createElement("input")
+checkbox.setAttribute("type", "checkbox")
+checkbox.setAttribute("id", "color")
+
+const label = document.createElement("label")
+label.for = "color"
+label.textContent = "color: "
+
+document.body.append(label)
+document.body.append(checkbox)
 
