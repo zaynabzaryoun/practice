@@ -777,18 +777,87 @@ const el = document.querySelector(".ele")
 // document.body.append(checkbox)
 
 
-const colors = ["Red", "Green", "Blue"];
-colors.map(color => {
-    const label = document.createElement("label")
-    const input = document.createElement("input")
-    input.setAttribute("type", "checkbox")
+// const colors = ["Red", "Green", "Blue"];
+// colors.map(color => {
+//     const label = document.createElement("label")
+//     const input = document.createElement("input")
+//     input.setAttribute("type", "checkbox")
 
-    document.body.append(label)
-    document.body.append(input)
+//     document.body.append(label)
+//     document.body.append(input)
 
-    label.textContent = color
-    label.for = color
-    input.id = color
-})
+//     label.textContent = color
+//     label.for = color
+//     input.id = color
+// })
+
+/////////////////////////////////////////////////////////////////////////
+
+// const radios = document.querySelectorAll("input[type='radio']") 
+// console.log(radios);
+
+// let selectedSize;
+
+// document.querySelector("#btn").addEventListener("click", () => {
+//     radios.forEach(e => {
+//         if (e.checked) {
+//             selectedSize = e.value
+        
+//         }
+        
+//     })
+//     let output = document.createElement("p")
+//     document.body.append(output)
+//     console.log(selectedSize);
+    
+//     output.textContent = selectedSize ? `you have clicked ${selectedSize}` : `try again!`
+//     console.log(selectedSize);
+    
+// })
+
+
+// Array.from(radios).map(radio => {
+//     radio.addEventListener("change", function (e) {
+//         console.log(e.target);
+//         if (e.target.checked) {
+//             console.log(e.target.value);
+            
+//         }
+        
+//     }
+//     )
+// })
+
+
+// const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+// sizes.map(size => {
+//     const div = document.createElement("div")
+    
+//     const radio = document.createElement("input")
+//     radio.type = "radio"
+//     radio.id = size.toLowerCase()
+//     radio.value = size
+//     radio.name = "sizes"
+
+//     const label = document.createElement("label")
+//     label.for = size.toLowerCase()
+//     label.textContent = size
+
+//     document.body.append(div)
+//     div.append(radio)
+//     div.append(label)
+
+// })
+
+// const btn = document.querySelector('#btn');
+// const sb = document.querySelector('#frameworks')
+
+// btn.addEventListener("click", (e) => {
+//     e.preventDefault()
+//     console.log(sb.options[sb.selectedIndex].value);
+    
+//     console.log(sb.selectedIndex);
+//     console.log(sb.value)
+// })
 
 
