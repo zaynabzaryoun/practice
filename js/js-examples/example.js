@@ -614,7 +614,7 @@ console.log(names);
 // event
 //when you click a button show a message explaining which button is been clicked.
 //create a div with ele class for html.
-// 
+//
 
 
 
@@ -634,5 +634,52 @@ console.log(names);
 // })
 
 
+//////////////////////////////////////////////////////- 19 -//////////////////////////////////////////////////////////////
+// Write a function fetchData(url) that simulates fetching data from a given URL. The function should return a promise that resolves after 2 seconds with the message:
+// "Data from [url]".
+
+// Then, use the fetchData function to fetch data from "https://api.example.com/data" and log the result to the console.
 
   
+// function fetchData(url) {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       if (url) {
+//         res(`Data from ${url}`)
+//       } else {
+//         rej(`Failed to fetch data from ${url}`)
+//       }
+//     }, 2000)
+//   })
+// }
+  
+
+// fetchData("https://api.example.com/data").then((msg) => {
+//   console.log("result", msg).catch((err) => {
+//     console.log("error", err);
+
+//   })
+  
+// })
+
+//////////////////////////////////////////////////////- 20 -//////////////////////////////////////////////////////////////
+// Write a function delayedSum(a, b) that returns a promise. The promise should resolve after 3 seconds with the sum of a and b.
+
+// Use the delayedSum function to calculate the sum of 5 and 10, and log the result to the console. Handle any potential errors gracefully.Chain another .then() to log:
+// "Calculation complete" after the result is logged.
+
+function delayedSum(a, b) {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      let result = a+b
+        res("sum " + result)
+    }, 3000);
+  })
+}
+
+delayedSum(5, 10).then((msg) => {
+  console.log(msg);
+}).then(() => {
+  console.log("Calculation complete");
+  
+})
