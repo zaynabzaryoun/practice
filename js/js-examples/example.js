@@ -668,18 +668,48 @@ console.log(names);
 // Use the delayedSum function to calculate the sum of 5 and 10, and log the result to the console. Handle any potential errors gracefully.Chain another .then() to log:
 // "Calculation complete" after the result is logged.
 
-function delayedSum(a, b) {
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      let result = a+b
-        res("sum " + result)
-    }, 3000);
-  })
-}
+// function delayedSum(a, b) {
+//   return new Promise((res, rej) => {
+//     setTimeout(() => {
+//       let result = a+b
+//         res("sum " + result)
+//     }, 3000);
+//   })
+// }
 
-delayedSum(5, 10).then((msg) => {
-  console.log(msg);
-}).then(() => {
-  console.log("Calculation complete");
+// delayedSum(5, 10).then((msg) => {
+//   console.log(msg);
+// }).then(() => {
+//   console.log("Calculation complete");
   
-})
+// })
+
+//////////////////////////////////////////////////////- 21 -//////////////////////////////////////////////////////////////
+
+// class Book{
+//   constructor(title, author, isbn) {
+//     this.title = title
+//     this.author = author
+//     this.isbn = isbn
+//   }
+//   getDetails() {
+//     return `Title: ${this.title}, Author: ${this.author}, ISBN: ${this.isbn}`
+//   }
+// }
+
+
+// const books = [
+//   new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925),
+//   new Book("1984", "George Orwell", 1949),
+//   new Book("To Kill a Mockingbird", "Harper Lee", 1960),
+//   new Book("The Catcher in the Rye", "J.D. Salinger", 1951),
+//   new Book("Pride and Prejudice", "Jane Austen", 1813),
+// ];
+
+// const detail = books.map(e => e.getDetails())
+// console.log(detail);
+
+
+// const title = books.map(e => e.title.toUpperCase())
+// console.log(title);
+
