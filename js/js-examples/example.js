@@ -713,3 +713,79 @@ console.log(names);
 // const title = books.map(e => e.title.toUpperCase())
 // console.log(title);
 
+//////////////////////////////////////////////////////- 22 -//////////////////////////////////////////////////////////////
+/* You need to create a Book class to represent books in a library. Each book has the following properties:
+Title (title) – a string.
+Author (author) – a string.
+Total Pages (totalPages) – a number.
+Read Pages (readPages) – a number (default is 0).
+The class should include:
+
+A constructor to initialize a new book.
+A private field to store the number of times the book has been opened.
+A getter progress to calculate and return the reading progress as a percentage ((readPages / totalPages) * 100).
+A setter progress to allow users to update the readPages by providing a percentage.
+If the percentage is greater than 100, set readPages to totalPages.
+A static method compareProgress(book1, book2):
+Accepts two books and returns the one with the higher reading progress.
+A method openBook():
+Increments the private field tracking how many times the book has been opened. */
+//answer:
+// class Book{
+//   constructor(title, author, totalPages, readPages=0) {
+//     this.title = title 
+//     this.author = author
+//     this.totalPages = totalPages
+//     this.readPages = readPages
+//     this.numOfTimesOpened = 0
+//   }
+
+//   get progress() {
+//     return (this.readPages/this.totalPages)*100
+//   }
+//   set progress(userProgress) {
+//     if (userProgress > 100) {
+//       this.readPages = this.totalPages
+//     } else {
+//       this.readPages = (userProgress * this.totalPages) / 100
+//     }
+//   }
+
+//   static compareProgress(book1, book2) {
+//     if (book1.progress > book2.progress) {
+//       return book1
+//     } else {
+//       return book2
+//     }
+//   }
+
+//   openBook() {
+//     return this.numOfTimesOpened++
+//   }
+// }
+
+
+// // Create books
+// const book1 = new Book("Harry Potter", "J.K. Rowling", 500);
+// const book2 = new Book("The Hobbit", "J.R.R. Tolkien", 300);
+
+// // Open the books
+// book1.openBook();
+// book1.openBook();
+// book2.openBook();
+
+// // Update progress
+// book1.progress = 50; // Sets readPages to 250
+// book2.progress = 75; // Sets readPages to 225
+
+// // Check progress
+// console.log(book1.progress); // 50
+// console.log(book2.progress); // 75
+
+// // Compare progress
+// const moreProgress = Book.compareProgress(book1, book2);
+// console.log(`${moreProgress.title} has more reading progress.`);
+
+// // Access private field indirectly
+// book1.openBook();
+// console.log(book1.openBook()); 
