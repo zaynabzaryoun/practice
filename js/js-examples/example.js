@@ -733,7 +733,7 @@ Increments the private field tracking how many times the book has been opened. *
 //answer:
 // class Book{
 //   constructor(title, author, totalPages, readPages=0) {
-//     this.title = title 
+//     this.title = title
 //     this.author = author
 //     this.totalPages = totalPages
 //     this.readPages = readPages
@@ -788,4 +788,11 @@ Increments the private field tracking how many times the book has been opened. *
 
 // // Access private field indirectly
 // book1.openBook();
-// console.log(book1.openBook()); 
+// console.log(book1.openBook());
+
+//////////////////////////////////////////////////what does "new" keyword do?///////////////////////////////////////////////////////////
+// const sara = new Person()
+//1- creates an empty object {}
+//2- sets "this" keyword inside of class to this new object
+//3- calls constructor method for adding propertis onto new obj by using "this"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
