@@ -295,9 +295,25 @@
 //         `${this.name} has logged out`
 //     );
 // }
+// function Admin(...arg) {
+//     User.apply(this, arg)
+//     this.role = "super admin"
+// }
+
+// Admin.prototype = Object.create(User.prototype)
+
+// Admin.prototype.deleteUser = function (user) {
+//     users = users.filter(e => {
+//        return e.email != user.email
+//     })
+// }
 
 // let user1 = new User("sara", "sara@gmail.com")
 // let user2 = new User("ali", "ali@gmail.com")
+// let admin1 = new Admin("pari", "pp@gmail.com")
+// console.log(admin1);
+
+
 
 // user1.login()
 // user2.login()
@@ -307,3 +323,19 @@
 
 // console.log(user1.login === user2.login);
 
+// let users = [user1, user2, admin1]
+
+
+// admin1.deleteUser(user1)
+// console.log(users);
+
+
+////////////
+// function greet(greeting, symbol) {
+//     console.log(`${greeting} my name is ${this.name} ${symbol}`);
+        
+// }
+
+// const person = { name: "zaynab" }
+// //call greet with this refers to person
+// greet.apply(person, ["hello", "!"])
