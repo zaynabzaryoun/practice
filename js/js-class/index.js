@@ -195,6 +195,115 @@
 // console.log(Square.isSquare(4, 5));
 
 
+// const animal = {
+//     eat: true
+// }
+// const dog = Object.create(animal)
+// dog.barke = true
+// console.log(dog);
+// console.log(animal);
 
 
+// function greeting() {
+//     console.log("hello");
+    
+// }
+
+// greeting.namee = "sss"
+// console.log(greeting.namee);
+
+
+
+// function Person(name){
+//     this.name = name
+// }
+
+// Person.prototype.greet = function () {
+//     console.log(`hello my name is ${this.name}`);
+// }
+// // console.log(typeof Person.prototype);
+
+
+// let sara = new Person("sara") 
+// sara.greet()
+// // console.log(Person.prototype);
+// // console.log(sara.__proto__);
+// // console.log(Person.prototype === sara.__proto__);
+
+
+
+
+// class User{
+//     constructor(name, email) {
+//         this.name = name
+//         this.email = email
+//         this.score = 0
+//     }
+//     login() {
+//         console.log(`${this.name} with ${this.email} has logged in`);
+//     }
+//     logout() {
+//         console.log(`${this.name} with ${this.email} has logged out`);
+//     }
+
+//     updateScore() {
+//         this.score++
+//         console.log(`${this.name} has scored ${this.score}`);
+//         return this
+//     }
+// }
+
+// class Admin extends User{
+//     deleteUser(user) {
+//         users = users.filter(u => {
+//            return u.email != user.email
+//         })
+//     }
+// }
+
+// let user1 = new User("sara", "sara44@gmail.com")
+// let user2 = new User("ali", "aa@gmail.com")
+// let admin1 = new Admin("pari", "p@gmail.com")
+
+// let users = [user1, user2, admin1]
+// admin1.deleteUser(user1)
+// console.log(users);
+
+
+
+
+// user1.login()
+// user1.updateScore().updateScore().logout()
+
+
+// function User(name, email) {
+//     this.name = name
+//     this.email = email
+//     this.online = false
+// }
+
+// User.prototype.login = function () {
+//     this.online = true
+//     console.log(
+//         `${this.name} has logged in`
+//     );
+// }
+
+// User.prototype.logout = function () {
+//     this.online = false
+//     console.log(
+//         `${this.name} has logged out`
+//     );
+// }
+
+// let user1 = new User("sara", "sara@gmail.com")
+// let user2 = new User("ali", "ali@gmail.com")
+
+// user1.login()
+// user2.login()
+
+
+// console.log(user1.name === user2.name);
+
+// console.log(user1.login === user2.login);
 
