@@ -135,57 +135,190 @@
 
 
 
-let stocks = {
-    fruits: ["strawberry", "grapes", "banana", "apple"],
-    liquids: ["water", "ice"],
-    holders: ["cone", "cup", "stick"],
-    toppings: ["chocolate", "peanuts"]
+// let stocks = {
+//     fruits: ["strawberry", "grapes", "banana", "apple"],
+//     liquids: ["water", "ice"],
+//     holders: ["cone", "cup", "stick"],
+//     toppings: ["chocolate", "peanuts"]
+// }
+
+// let is_shop_open = false
+
+// let order = (time, work) => {
+//     return new Promise((resolve, reject) => {
+//         if (is_shop_open) {
+//             setTimeout(() => {
+//                 resolve(work())
+//             }, time)
+//         } else {
+//             reject(console.log("our shop is closed"))
+//         }
+//     })
+// }
+
+// order(2000, () => console.log(`${stocks.fruits[0]} was selected`))
+
+//     .then(() => {
+//         return order(0o0, () =>console.log("production has started"))
+//     })
+
+//     .then(() => {
+//         return order(2000, () =>console.log("fruits were shops"))
+//     })
+
+//     .then(() => {
+//         return order(2000, ()=> console.log(`${stocks.liquids[0]} and ${stocks.liquids[1]} was selected`))
+//     })
+
+//     .then(() => {
+//         return order(1000, ()=> console.log("start the machine"))
+//     })
+
+//     .then(() => {
+//         return order(2000, ()=> console.log(`ice cream placed on ${stocks.holders[0]}`))
+//     })
+    
+//     .then(() => {
+//         return order(3000, ()=> console.log(`${stocks.toppings[0]} was selected`))
+//     })
+
+//     .then(() => {
+//         return order(2000, ()=> console.log("ice is sereved"))
+//     })
+
+//     .catch(() => console.log("the contomer left"))
+    
+//     .finally(()=> console.log("day ended, the shop is closed"))
+
+
+
+// let stocks = {
+//     fruits: ["strawberry", "grapes", "banana", "apple"],
+//     liquids: ["water", "ice"],
+//     holders: ["cone", "cup", "stick"],
+//     toppings: ["chocolate", "peanuts"]
+// }
+
+// let is_shop_open = true
+
+// async function order() {
+//     try {
+//         await abc
+//     }
+//     catch (error) {
+//         console.log("abc doesnt exist", error);
+        
+//     }
+//     finally {
+//         console.log("runs anyways");
+        
+//     }
+// }
+
+// order()
+
+// .then(()=> console.log("hhj")
+// )
+
+
+// const topping_choice = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(console.log("which toppings would you like?"))
+            
+//         }, 3000)
+//     })
+// }
+
+// async function kitchen() {
+//     console.log("A");
+//     console.log("B");
+//     console.log("C");
+
+//     await topping_choice()
+
+//     console.log("D");
+//     console.log("E");
+// }
+
+// kitchen()
+
+// console.log("getting orders");
+// console.log("doing the dishes");
+
+
+
+
+
+
+// let p = new Promise((resovle, reject) => {
+//     let isTrue = true
+
+//     if (isTrue) {
+//         resovle("fullfilled")
+
+//     } else {
+//         reject("rejected")
+//     }
+// })
+
+// p
+//     .then(msg=> console.log(msg))
+//     .catch(err => console.log(err))
+
+
+
+// const isPhoneStore = true
+// const isPhoneAvailable = true
+
+function processMessage(resolveCallback, rejectCallback) {
+    if (!isPhoneStore) {
+        rejectCallback({
+            name: 'wrong store',
+            message: "sorry this is a food store"
+        })
+    } else if (!isPhoneAvailable) {
+        rejectCallback({
+            name: "out of stock",
+            message: "sorry this phone is out of stock"
+        })
+    } else {
+        resolveCallback({
+            name: "ok",
+            message :"the phone is available! how many do you want?"
+        })
+    }
 }
 
-let is_shop_open = true
+processMessage(value => console.log(value), reason => console.log(reason))
 
-let order = (time, work) => {
+
+
+let isPhoneStore = true
+let isPhoneAvailable = true
+
+
+function processMessage() {
     return new Promise((resolve, reject) => {
-        if (is_shop_open) {
-            setTimeout(() => {
-                resolve(work())
-            }, time)
+        if (!isPhoneStore) {
+            reject({
+                name: 'wrong store',
+                message: "sorry this is a food store"
+            })
+        } else if (!isPhoneAvailable) {
+            reject({
+                name: "out of stock",
+                message: "sorry this phone is out of stock"
+            })
         } else {
-            reject(console.log("our shop is closed"))
+            resolve({
+                name: "ok",
+                message :"the phone is available! how many do you want?"
+            })
         }
     })
-}
+} 
 
-order(2000, () => console.log(`${stocks.fruits[0]} was selected`))
-
-    .then(() => {
-        return order(0o0, () =>console.log("production has started"))   
-    })
-
-    .then(() => {
-        return order(2000, () =>console.log("fruits were shops"))
-    })
-
-    .then(() => {
-        return order(2000, ()=> console.log(`${stocks.liquids[0]} and ${stocks.liquids[1]} was selected`)
-        )
-    })
-
-    .then(() => {
-        return order(1000, ()=> console.log("start the machine"))
-    })
-
-    .then(() => {
-        return order(2000, ()=> console.log(`ice cream placed on ${stocks.holders[0]}`)
-        )
-    })
-    
-    .then(() => {
-        return order(3000, ()=> console.log(`${stocks.toppings[0]} was selected`)
-        )
-    })
-
-    .then(() => {
-        return order(2000, ()=> console.log("ice is sereved")
-        )
-    })
+processMessage()
+    .then(value => console.log(value))
+    .catch(reason => console.log(reason))
