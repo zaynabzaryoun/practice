@@ -951,9 +951,14 @@ Increments the private field tracking how many times the book has been opened. *
 // }
 
 // fetchPosts()
-//     .then((response) => {
-//     console.log("response obj:", response);
-//     return response.json()
+//   .then((response) => {
+//     if (!response.ok) {
+//         throw new Error("Network response was not ok " + response.statusText)
+//     } else {
+//       console.log(response.ok);  
+//       console.log("response obj:", response);
+//       return response.json()
+//     }
 //     })
 //     .then((data) => console.log("data: ", data))
 //     .catch((err) => {
