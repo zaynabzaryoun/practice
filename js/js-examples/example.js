@@ -796,3 +796,168 @@ Increments the private field tracking how many times the book has been opened. *
 //2- sets "this" keyword inside of class to this new object
 //3- calls constructor method for adding propertis onto new obj by using "this"
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////- 23 -//////////////////////////////////////////////////////////////
+
+
+// let p = new Promise((resovle, reject) => {
+//     let isTrue = true
+
+//     if (isTrue) {
+//         resovle("fullfilled")
+
+//     } else {
+//         reject("rejected")
+//     }
+// })
+
+// p
+//     .then(msg=> console.log(msg))
+//     .catch(err => console.log(err))
+
+
+
+// const isPhoneStore = true
+// const isPhoneAvailable = true
+
+// function processMessage(resolveCallback, rejectCallback) {
+//     if (!isPhoneStore) {
+//         rejectCallback({
+//             name: 'wrong store',
+//             message: "sorry this is a food store"
+//         })
+//     } else if (!isPhoneAvailable) {
+//         rejectCallback({
+//             name: "out of stock",
+//             message: "sorry this phone is out of stock"
+//         })
+//     } else {
+//         resolveCallback({
+//             name: "ok",
+//             message :"the phone is available! how many do you want?"
+//         })
+//     }
+// }
+
+// processMessage(value => console.log(value), reason => console.log(reason))
+
+
+
+// let isPhoneStore = true
+// let isPhoneAvailable = true
+
+
+// function processMessage() {
+//     return new Promise((resolve, reject) => {
+//         if (!isPhoneStore) {
+//             reject({
+//                 name: 'wrong store',
+//                 message: "sorry this is a food store"
+//             })
+//         } else if (!isPhoneAvailable) {
+//             reject({
+//                 name: "out of stock",
+//                 message: "sorry this phone is out of stock"
+//             })
+//         } else {
+//             resolve({
+//                 name: "ok",
+//                 message :"the phone is available! how many do you want?"
+//             })
+//         }
+//     })
+// }
+
+// processMessage()
+//     .then(value => console.log(value))
+//     .catch(reason => console.log(reason))
+
+/////////////////////////////////////////////////////////////- 24/////////////////////////////////////////////////////////////
+
+
+// function stepOne(value, callback) {
+//     setTimeout(() => {
+//         console.log(value);
+//         callback()
+//     }, 3000)
+// }
+
+// function stepTwo(value, callback) {
+//     setTimeout(() => {
+//         console.log(value);
+//         callback()
+//     }, 2000)
+// }
+
+// function stepThree(value, callback) {
+//     setTimeout(() => {
+//         console.log(value);
+//         callback()
+//     }, 1000)
+// }
+
+// stepOne(1, () => {
+//     stepTwo(2, () => {
+//         stepThree(3, () => {
+//             console.log("all steps compeleted!");
+//         })
+//     })
+// })
+
+
+
+// function stepOne(value) {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log(value);
+//             resolve()
+//         }, 3000)
+//     })
+// }
+
+// function stepTwo(value) {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log(value);
+//             resolve()
+//         }, 2000)
+//     })
+// }
+
+
+// function stepThree(value) {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log(value);
+//             resolve()
+//         }, 1000)
+//     })
+// }
+
+// stepOne(1)
+//     .then(() => stepTwo(2))
+//     .then(() => stepThree(3))
+//     .then(() => console.log("all steps compeleted!"))
+
+
+////////////////////////////////////////////////////////// -25- /////////////////////////////////
+
+
+// function fetchPosts() {
+//     let responsePromise = fetch("https://jsonplaceholder.typicode.com/posts")
+//     return responsePromise
+// }
+
+// fetchPosts()
+//     .then((response) => {
+//     console.log("response obj:", response);
+//     return response.json()
+//     })
+//     .then((data) => console.log("data: ", data))
+//     .catch((err) => {
+//         console.log("error", err);
+        
+//     })
+
