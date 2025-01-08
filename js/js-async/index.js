@@ -251,3 +251,70 @@
 
 
 
+// function fetchPost() {
+//     let response = fetch("https://jsonplaceholder.typicode.com/posts")
+//         .then((response) => {
+//             console.log(response);
+//             if (!response.ok) {
+//                 throw new Error("http error" + response.statusText)
+//             } else {
+//                 let data = response.json()
+//                 return data
+//             }
+//         })
+//         .then((data) => {
+//         console.log("data ", data);
+        
+//         })
+//         .catch((error) => {
+//         console.log(error);
+//     })
+
+// }
+
+// fetchPost()
+
+//fetch fucntino returns response object when the promise resolve. we can get this obj by then.
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//     .then((response) => {
+//         // console.log(response.body.getReader());
+//        return response.json()
+//     }).then((data) => {
+//        console.log(data);
+//     })
+//     .catch((err) => {
+//     console.log(err);
+//     })
+
+
+// (async function getPosts() {
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/posts")
+//         const json = await response.json()
+//         console.log(json);
+//     } catch (err) {
+//         console.log(err);
+        
+//     }
+// })()
+
+
+// const getPosts = async () => {
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/posts")
+//         const json = await response.json()
+//         if (json.userId == 1) {
+//             json.compeleted = false
+//         } else {
+//             json.compeleted = true
+//         }
+//         console.log(json);
+        
+        
+//     } catch (err) {
+//         console.log(err);
+        
+//     }
+// }
+
+// getPosts()
