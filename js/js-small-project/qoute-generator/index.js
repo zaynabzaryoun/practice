@@ -19,7 +19,7 @@ async function getQoute() {
         console.log("error: ", err);
     }
 }
-
+getQoute()
 btn.addEventListener("click", getQoute)
 // getQoute()
 
