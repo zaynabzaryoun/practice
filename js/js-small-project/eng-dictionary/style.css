@@ -1,0 +1,12 @@
+section{
+    margin: 10px auto;
+}
+
+.fa-volume-xmark{
+    color: gray;
+    
+}
+.hidden{
+    display: none !important;
+
+}
