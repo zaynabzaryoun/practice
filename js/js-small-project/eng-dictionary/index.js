@@ -5,15 +5,14 @@ const soundIcon = document.querySelector(".fa-volume-high")
 const notSoundIcon = document.querySelector(".fa-volume-xmark")
 const phoneticEle = document.querySelector(".phonetic")
 const definitionDiv = document.querySelector(".definition")  
+const ukEle = document.querySelector(".uk") 
+const usEle = document.querySelector(".us") 
+const partOfSpeechEle = document.querySelector(".part-of-speech")
 
 
 let searchedWord = ""
-const sound = new Audio("")
-
-
-
-// sound.play()
-
+const ukSound = new Audio("")
+const usSound = new Audio("")
 
 btn.addEventListener("click", getTranslation)
 console.log(input.value);
@@ -35,26 +34,25 @@ async function getTranslation() {
         const data = await response.json();
         
         wordEle.textContent = data[0].word
-        sound.src = data[0].phonetics[1].audio
-        console.log("gg", sound.src.includes("mp3"));
-        console.log(sound.src);
         
-        if (!sound.src.includes("mp3") && notSoundIcon.classList.contains("hidden")) {
-            soundIcon.classList.toggle("hidden")
-            notSoundIcon.classList.toggle("hidden")
-            console.log("sound", soundIcon.classList);
-            console.log("noutsound", notSoundIcon.classList);   
-        } else if(sound.src.includes("mp3") && soundIcon.classList.contains("hidden")){
-            soundIcon.classList.toggle("hidden")
-            notSoundIcon.classList.toggle("hidden")
-        }
+        ukSound.src  = data[0].phonetics.find(e =>e.audio.includes("-uk"))?.audio 
+        usSound.src = data[0].phonetics.find(e => e.audio.includes("-us"))?.audio 
+
+        
+        // console.log(usAudioObj.audio);
+    
+        // usSound.src = usAudioObj.audio
+        
+        phoneticEle.textContent = data[0].meanings
+
         phoneticEle.textContent = data[0].phonetics[1].text
-        // definitionEle.textContent = data[0].meanings[0].definitions[0].definition
+    
         console.log(data[0].meanings[0].definitions);
+        definitionDiv.innerHTML = ""
         data[0].meanings[0].definitions.map(definition => {
             const p = document.createElement("p")
             p.textContent = definition.definition
-            definitionDiv.appendChild(p)
+            definitionDiv.append(p)
         })
         
         console.log(data[0]);
@@ -67,8 +65,14 @@ async function getTranslation() {
 }
 
 getTranslation()
-soundIcon.addEventListener("click", () => {
-    sound.play()
-    console.log("play");
+ukEle.addEventListener("click", () => {
+    ukSound.play()
+    console.log("play uk");
     
 })
+usEle.addEventListener("click", () => {
+    usSound.play()
+    console.log("play us");
+    
+})
+
