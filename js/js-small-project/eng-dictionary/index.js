@@ -35,13 +35,15 @@ async function getTranslation() {
         
         wordEle.textContent = data[0].word
         
-        ukSound.src  = data[0].phonetics.find(e =>e.audio.includes("-uk"))?.audio 
-        usSound.src = data[0].phonetics.find(e => e.audio.includes("-us"))?.audio 
+        ukSound.src  = data[0].phonetics.find(e =>e.audio.includes("-uk")).audio 
+        usSound.src = data[0].phonetics.find(e => e.audio.includes("-us")).audio 
 
+        console.log(ukSound);
+        console.log(usSound);
         
-        // console.log(usAudioObj.audio);
+        
+
     
-        // usSound.src = usAudioObj.audio
         
         phoneticEle.textContent = data[0].meanings
 
