@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+ background-color: rgba(245, 255, 236, 0.864);  
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ display: flex;
+ flex-direction: column; 
+ align-items: center;
+}
+
+.divider{
+    padding-bottom: 0.5em;
+    width: 4em;
+    border-bottom: 3px solid rgb(101, 191, 22);  
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    box-shadow: 1px 1px 5px 1px rgb(203, 205, 192);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 2em 0;
+}
+
+img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 0.7em;
+    position: relative;
+    z-index: 2;
+}
+
+.img-wrapper{
+    position: relative;
+    z-index: 2;
+}
+
+.img-wrapper::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f10e";
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background-color: rgb(119, 179, 66);  
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.6em;
+    font-size: 0.6em;
+    z-index: 3;
+}
+
+.img-wrapper::after{
+    content: "";
+    width: 90px;
+    height: 90px;
+    background-color: rgb(101, 191, 22);  
+    border-radius: 50%;
+    position: absolute;
+    top: -2%;
+    left: 5%;
+    z-index: 1;
+}
+
+h5{
+    letter-spacing: 3px;
+}
+
+h6{
+    color: rgb(119, 179, 66);  
+    text-transform: uppercase;
+}
+
+p{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+    text-align: center;
+    color: rgb(116, 134, 100);  
+}
+
+button{
+    border: none;   
+    background-color: #fff;
+    color: rgb(129, 215, 136);
+}
+
+.fa-greater-than{
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+.fa-less-than{
+    margin-right: 0.5em;
+    cursor: pointer;
+}
+
