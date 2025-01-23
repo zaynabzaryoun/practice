@@ -90,15 +90,33 @@ p{
 button{
     border: none;   
     background-color: #fff;
-    color: rgb(129, 215, 136);
+    color: rgb(101, 182, 107);
 }
 
 .fa-greater-than{
     margin-left: 0.5em;
     cursor: pointer;
 }
+
 .fa-less-than{
     margin-right: 0.5em;
     cursor: pointer;
 }
+
+.surprise{
+    border: 1px solid rgb(65, 154, 72);
+    color: rgb(65, 154, 72);;
+    border-radius: 5px;
+    background-color: rgb(247, 255, 247);
+    padding: 0.4em;
+    margin-top: 0.5em;
+    font-size: 0.6em;
+    transition: all 0.4s ease-in-out; 
+    cursor: pointer; 
+}
+
+.surprise:hover {
+    background-color: rgb(65, 154, 72);
+    color: #fff; 
+  }
 
