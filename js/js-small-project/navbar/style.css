@@ -3,7 +3,7 @@
     padding: 0;
 }
 html{
-    width: 100%;
+    /* width: 100%; */
 }
 
 body{
@@ -52,13 +52,30 @@ i{
     color: rgb(75, 152, 182);
 }
 
-.bar-container{
+.hidden{
     display: none;
 }
 
-@media (max-width: 550px) {
+.fa-bars{
+
+    transition: transform 500ms linear ;
+}
+
+.fa-bars:hover{
+    transform: rotate(90deg);
+}
+
+
+@media (max-width: 500px) {
+
+    nav{
+        /* flex-direction: column; */
+    }
     .pages{
         flex-direction: column;
+        /* display: none; */
+        /* position: absolute; */
+        /* top: 100px; */
     }
 
     nav .icon {
@@ -66,7 +83,12 @@ i{
         flex-direction: column;
     }
 
-    nav .bar-container{
-
+    nav .bar-display{
+        /* display: block; */
     }
+
+    .icon{
+        display: none;
+    }
+    
 }
