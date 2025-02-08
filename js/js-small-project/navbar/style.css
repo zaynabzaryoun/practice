@@ -3,7 +3,7 @@
     padding: 0;
 }
 html{
-    /* width: 100%; */
+   
 }
 
 body{
@@ -15,14 +15,9 @@ nav{
     justify-content: space-around;
     align-items: center;
     padding: 1em 0em;
-    /* border: 1px solid grey; */
     box-shadow: 0px 0px 7px 0px grey;
     width: 100%;
-    /* flex-basis: ; */
-}
-
-h2{
-    margin-left: -1.6em;
+    gap: 20px;
 }
 
 nav span{
@@ -37,15 +32,21 @@ ul{
     
 }
 
+
 li{
     list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 .icon{
     width: 17%;
     display: flex;
     justify-content: space-between;
-    /* margin-right: -2.2em; */
 }
 
 i{
@@ -58,7 +59,7 @@ i{
 
 .fa-bars{
 
-    transition: transform 500ms linear ;
+    transition: transform 500ms linear;
 }
 
 .fa-bars:hover{
@@ -66,29 +67,35 @@ i{
 }
 
 
+
 @media (max-width: 500px) {
 
     nav{
-        /* flex-direction: column; */
+        flex-direction: column;
+        position: relative;
+        align-items: flex-start;
     }
     .pages{
-        flex-direction: column;
-        /* display: none; */
-        /* position: absolute; */
-        /* top: 100px; */
+        flex-direction: column; 
+    }
+
+    .bar-container{
+        position: absolute;
+        right: 4px;
+        top: 20px;
     }
 
     nav .icon {
-
         flex-direction: column;
-    }
-
-    nav .bar-display{
-        /* display: block; */
     }
 
     .icon{
         display: none;
     }
+
+    a{
+        margin: 15px 0;
+    }
+
     
 }
