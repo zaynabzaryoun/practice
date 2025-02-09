@@ -99,3 +99,77 @@ i{
 
     
 }
+
+
+
+
+
+
+
+
+
+
+
+/********* "simple version for practice" ********/
+
+/* 
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 7px 0px grey;
+}
+
+ul{
+    display:flex;
+}
+
+li{
+    list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.hidden{
+    display: none;
+}
+
+
+.fa-bars{
+    transition: transform 1s ease ;
+}
+
+.fa-bars:hover{
+    transform: rotate(90deg);
+
+}
+
+@media (max-width: 500px) {
+    nav{
+        flex-direction: column;
+        position: relative;
+    }
+
+    .icon{
+        display: none;
+    }
+
+    .pages{
+        flex-direction: column;
+    }
+
+    .bar-container{
+        position: absolute;
+        top: 5px;
+        right:  4px;
+    }
+} */

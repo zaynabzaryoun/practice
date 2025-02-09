@@ -1,39 +1,20 @@
-const pages = document.querySelector(".pages")
 const bars = document.querySelector(".bar-container")
-
-console.log(bars);
-
-
-function handleBar() {
-    pages.classList.toggle("hidden")
-}
-
-
-window.addEventListener("DOMContentLoaded", showBarsAndPages)
-
-function showBarsAndPages() {
+const pages = document.querySelector(".pages")
+function display() {
     if (window.innerWidth < 500) {
-        bars.classList.remove("hidden")
-        pages.classList.add("hidden")
+        bars.classList.remove("hidden");
+        pages.classList.add("hidden") 
     } else {
-        bars.classList.add("hidden")
+        bars.classList.add("hidden"); 
         pages.classList.remove("hidden")
     }
+
 }
+window.addEventListener("DOMContentLoaded", display)
+window.addEventListener("resize", display)    
 
-
-bars.addEventListener("click", handleBar)
-
-window.addEventListener("resize", () => {
-    if (window.innerWidth < 500) {
-        bars.classList.remove("hidden")
-        pages.classList.add("hidden")
-        console.log("jjj");
-        
-    } else {
-        bars.classList.add("hidden")
-        pages.classList.remove("hidden")
-
+    const handleClick = () => {
+        pages.classList.toggle("hidden")
     }
-})
 
+    bars.addEventListener("click", handleClick)
