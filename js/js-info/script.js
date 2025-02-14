@@ -151,22 +151,158 @@
 
 // The loop must ask for a number until either the visitor enters a number greater than 100 or cancels the input/enters an empty line.
 
-let i 
+// let i
 
-do {
-    i = +prompt("enter a num")
+// do {
+//     i = +prompt("enter a num")
 
-}while(i<=100 && num!==null)
-console.log(i);
+// }while(i<=100 && num)
+// console.log(i);
+
+/////////////////////////////////////
+// Write the code which outputs prime numbers in the interval from 2 to n.
+
+// let n = 944
+// let isPrime = true;
+// for (let i = 2; i <= Math.sqrt(n); i++){
+//     if (!(n%i)) {
+//         isPrime = false
+//         break
+//     }
+// }
+// if (n > 1 && isPrime) {
+//     console.log("is prime");
+// } else {
+//     console.log("is not prime");
+    
+// }
+
+////////////////////////////////////////////
+// Write the code using if..else which would correspond to the following switch:
+
+// switch (browser) {
+//   case 'Edge':
+//     alert( "You've got the Edge!" );
+//     break;
+
+//   case 'Chrome':
+//   case 'Firefox':
+//   case 'Safari':
+//   case 'Opera':
+//     alert( 'Okay we support these browsers too' );
+//     break;
+
+//   default:
+//     alert( 'We hope that this page looks ok!' );
+// }
+
+//answer:
+
+// if (browser === "Edge") {
+//     alert( "You've got the Edge!" );
+// } else if (browser === "Chrome"
+//     || "Firefox"
+//     || "Safari"
+//     || "Opera") {
+//     alert( 'Okay we support these browsers too' );
+// } else {
+//     alert( 'We hope that this page looks ok!' );
+// }
+///////////////////////////////////////////////////////////////////////
+
+// Rewrite the code below using a single switch statement:
+
+// let a = +prompt('a?', '');
+
+// if (a == 0) {
+//   alert( 0 );
+// }
+// if (a == 1) {
+//   alert( 1 );
+// }
+
+// if (a == 2 || a == 3) {
+//   alert( '2,3' );
+// }
+
+// switch (a) {
+//     case 0:
+//         alert(0)
+//         break
+//     case 1:
+//         alert(1)
+//         break
+//     case 2:
+//     case 3:
+//         alert("2, 3")
+//         break
+// }
 
 
+///////////////////////////////////////////////////////////////////
+
+// function plusA(n, a=4) {
+//     n = n + a
+// }
+
+// let n = 10
+// plusA(n, 3)
+// console.log(n);
+
+//////////////////////////////////////////////////////////
+// Rewrite it, to perform the same, but without if, in a single line.
+
+// Make two variants of checkAge:
+
+// Using a question mark operator ?
+// Using OR ||
 
 
+// function checkAge(age) {
+//     if (age > 18) {
+//       return true;
+//     } else {
+//       return confirm('Did parents allow you?');
+//     }
+//   }
+
+// function checkAge(age) {
+//     return result = age > 18 ? true :  confirm('Did parents allow you?');
+// }
+
+// function checkAge(age) {
+//     return result = age > 18 || confirm('Did parents allow you?');
+// }
+
+///////////////////////////////////////////////////////////
+// Write a function min(a,b) which returns the least of two numbers a and b.
+// function min(a, b) {
+//     if (a > b) {
+//         return b
+//     } else {
+//         return a
+//     }
+// }
 
 
+// console.log(min(2, 5) == 2);
+// console.log(min(3, -1) == -1);
+// console.log(min(1, 1) == 1);
 
+////////////////////////////////////////////////////////////////////////
+// Write a function pow(x,n) that returns x in power n. Or, in other words, multiplies x by itself n times and returns the result.
+let m = 1
+function pow(x, n) {
+    for (let i = 1; i <= n - 1; i++){
+        
+         m = m * x
+    }
+    return m
+}
 
-
+console.log(pow(3, 2))
+console.log(pow(3, 3))
+console.log(pow(1, 100)) 
 
 
 
