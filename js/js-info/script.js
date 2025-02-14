@@ -291,26 +291,220 @@
 
 ////////////////////////////////////////////////////////////////////////
 // Write a function pow(x,n) that returns x in power n. Or, in other words, multiplies x by itself n times and returns the result.
-let m = 1
-function pow(x, n) {
-    for (let i = 1; i <= n - 1; i++){
-        
-         m = m * x
+
+// function pow(x, n) {
+//     let m = 1;
+//     for (let i = 1; i <= n ; i++){
+//          m = m * x
+//     }
+//     return m
+// }
+
+// console.log(pow(3, 2))
+// console.log(pow(3, 3))
+// console.log(pow(1, 100))
+
+////////////////////////////////////////////////////////////////////
+// let key = "likes"
+// let user = {
+//     firstName: "amin",
+//     lastName: "amini",
+//     [key]: true,
+// }
+
+// console.log(user[key]);
+
+
+// let user = {
+//     name: "John",
+//     age: 30
+// };
+  
+// let key = prompt("what so you want to know about the user?", "name")
+
+// console.log(user[key])
+
+
+// let fruits = prompt("your fruits", "apple")
+// let bag = {
+//     ["red" + fruits] : 5
+// }
+
+// console.log(bag);
+
+
+// function makeUser(name, age) {
+//     return {
+//         name,
+//         age,
+//     }
+// }
+
+
+// let user = makeUser("sara", "afshar")
+// console.log(user);
+
+
+//////////////////////////////////////
+
+// let obj = {
+//     for: 1,
+//     let: 2,
+//     return: 3
+// }
+// console.log(obj.for + obj.let + obj.return);
+
+
+// let obj = {
+//     0: "test",
+// }
+
+// console.log(obj[0]);
+// console.log(obj["0"]);
+
+// let obj = {}
+// obj.__proto__ = 5;
+// console.log(obj.__proto__);
+
+// let user = {};
+// console.log(user.age === undefined);
+
+
+// let user = { name: "John", age: 30 };
+// console.log("name" in user);
+// console.log("hello" in user);
+
+// for (let key in obj) {
+    
+// }
+
+
+// let user = {
+//     name: "John",
+//     age: 30,
+//     isAdmin: true
+//   };
+  
+// for (let key in user) {
+//     console.log(key);
+//     console.log(user[key]);
+// }
+
+// let codes = {
+//     "+49": "Germany",
+//     "+41": "Switzerland",
+//     "+44": "Great Britain",
+//     // ..,
+//     "+1": "USA"
+// };
+  
+// console.log(codes);
+
+// console.log(String(Math.trunc(Number("49"))));
+// console.log(String(Number("+49")));
+// console.log(String(Number("1.2")));
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+// Write the code, one line for each action:
+
+// Create an empty object user.
+// Add the property name with the value John.
+// Add the property surname with the value Smith.
+// Change the value of the name to Pete.
+// Remove the property name from the object.
+
+// let user = {}
+// user.name = "John"
+// user["surname"] = "Smith"
+// user.name = "Pete"
+// delete user.name
+// console.log(user);
+
+////////////////////////////////////////////////////////////////////////////
+// Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
+
+// Should work like that:
+
+// let schedule = {};
+
+// alert( isEmpty(schedule) ); // true
+
+// schedule["8:30"] = "get up";
+
+// alert( isEmpty(schedule) ); // false
+
+// let user = {
+// //   name: "zz"
+// }
+
+// function isEmpty(obj) {
+//     for (let key in obj) {
+//         return false
+//     }
+//     return true
+// }
+
+// console.log(isEmpty(user));
+
+////////////////////////////////////////////////////////////////////////////////
+// We have an object storing salaries of our team:
+
+// let salaries = {
+// //   John: 100,
+// //   Ann: 160,
+// //   Pete: 130
+// }
+// // Write the code to sum all salaries and store in the variable sum. Should be 390 in the example above.
+
+// // If salaries is empty, then the result must be 0.
+
+// function sumOfSalaries(obj) {
+//     let sum = 0;
+//     for (let key in obj) {
+//         sum += obj[key]
+//     }
+//     return sum
+// }
+// console.log(sumOfSalaries(salaries))
+
+
+//////////////////////////////////////////////////////////////////////////
+
+// Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
+
+// For instance:
+
+// // before the call
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu"
+// };
+
+// multiplyNumeric(menu);
+
+// // after the call
+menu = {
+  width: 400,
+  height: 600,
+  title: "My menu"
+};
+// Please note that multiplyNumeric does not need to return anything. It should modify the object in-place.
+
+// P.S. Use typeof to check for a number here.
+
+
+
+function multiplyNumeric(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] === "number") {
+            obj[key] = obj[key] * 2 
+        }
     }
-    return m
 }
 
-console.log(pow(3, 2))
-console.log(pow(3, 3))
-console.log(pow(1, 100)) 
-
-
-
-
-
-
-
-
-
-
-
+multiplyNumeric(menu)
+console.log(menu);
