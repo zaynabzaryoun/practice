@@ -487,24 +487,284 @@
 // multiplyNumeric(menu);
 
 // // after the call
-menu = {
-  width: 400,
-  height: 600,
-  title: "My menu"
-};
+// menu = {
+//   width: 400,
+//   height: 600,
+//   title: "My menu"
+// };
 // Please note that multiplyNumeric does not need to return anything. It should modify the object in-place.
 
 // P.S. Use typeof to check for a number here.
 
 
 
-function multiplyNumeric(obj) {
-    for (let key in obj) {
-        if (typeof obj[key] === "number") {
-            obj[key] = obj[key] * 2 
-        }
-    }
-}
+// function multiplyNumeric(obj) {
+//     for (let key in obj) {
+//         if (typeof obj[key] === "number") {
+//             obj[key] = obj[key] * 2
+//         }
+//     }
+// }
 
-multiplyNumeric(menu)
-console.log(menu);
+// multiplyNumeric(menu)
+// console.log(menu);
+
+
+// let user = {
+//     name: "John",
+//     age: 30
+// };
+  
+// // let clone = {}
+
+// // for (let key in user) {
+// //     clone[key] = user[key]
+// // }
+
+// let obj = { ...user }
+// obj.name = "ssss"
+// console.log(obj);
+// console.log(user);
+
+// let user = { name: "John" };
+
+// let permissions1 = { canView: true };
+// let permissions2 = { canEdit: true };
+
+// Object.assign(user, permissions1, permissions2)
+// console.log(user);
+
+// Object.assign(user, { name: "yyy" })
+// console.log(user);
+
+// let userClone = {}
+// const clone = Object.assign({}, user)
+// console.log(clone);
+
+
+
+// let user = {
+//     name: "john",
+//     size: {
+//         height: 170,
+//         width: 70
+//     }
+
+// }
+
+// let clone = Object.assign({}, user)
+
+// console.log(clone.size === user.size);
+// clone.size.width = {}
+// console.log(user);
+// console.log(clone);
+
+
+// let clone = structuredClone(user)
+// console.log(clone.size === user.size);
+
+// let user = {}
+// user.me = user;
+// console.log(user);
+// let clone = structuredClone(user)
+// console.log(clone.me === clone);
+
+// function marry(man, woman) {
+//     man.wife = woman;
+//     woman.husband = man
+
+//     return ({
+//         father: man,
+//         mother: woman,
+//     })
+// }
+
+// let family1 = marry({name : "ali"}, {name: "sara"})
+// console.log(family1);
+
+
+// delete family1.father.wife
+// delete family1.mother.husband
+
+// let user = {
+//     name: "john",
+//     age: 40,
+//     // sayHi: function() {
+//     //     console.log("hello");
+        
+//     // }
+//     sayHi(){
+//         console.log(`hello ${this.name}`);
+//         console.log(this);
+        
+        
+//     }
+// }
+
+// // user.sayHi = function () {
+// //     console.log("hello");
+    
+// // }
+
+// user.sayHi()
+
+// let user = {
+//     name: "john",
+//     age: 40,
+//     // sayHi: function() {
+//     //     console.log("hello");
+        
+//     // }
+//     sayHi(){
+//         console.log(`hello ${user.name}`);
+//         console.log(this);
+//     }
+// }
+
+// user.sayHi()
+
+// let clone = user
+
+// user = null;
+
+// clone.sayHi()
+
+// function sayhi() {
+//     console.log(this);
+    
+// }
+
+// sayhi()
+
+// let user = { name: "sara" }
+// let admin = { name: "admin" }
+
+// function sayHi() {
+//     console.log(this.name);
+// }
+
+// user.f= sayHi
+// admin.f = sayHi
+
+// user.f()
+// admin.f()
+// admin["f"]()
+
+
+// let user = {
+//     name: "john",
+//     age: 40,
+//     // sayHi() {
+//         // console.log(this);
+//         arrow: () => {
+//             console.log(this);
+            
+//         }
+//     }
+
+
+// user.arrow()
+/////////////////////////////////////////////////////////
+
+// Here the function makeUser returns an object.
+
+// What is the result of accessing its ref? Why?
+
+// function makeUser() {
+//   return {
+//     name: "John",
+//     ref: this
+//   };
+// }
+
+// let user = makeUser();
+
+// console.log( user.ref.name); // What's the result?
+///////////////////////////////////////////////////////////
+
+// Create an object calculator with three methods:
+
+// read() prompts for two values and saves them as object properties with names a and b respectively.
+// sum() returns the sum of saved values.
+// mul() multiplies saved values and returns the result.
+// let calculator = {
+//   // ... your code ...
+// };
+
+// calculator.read();
+// alert( calculator.sum());
+// alert( calculator.mul());
+
+// let calculator = {
+//     read() {
+//         this.a = +prompt("enter a?", "")
+//         this.b = +prompt("enter b ?", "")
+//     },
+//     sum() {
+//         return this.a + this.b
+//     },
+//     mul() {
+//         return this.a * this.b
+//     }
+// }
+// console.log(calculator.a);
+
+
+// calculator.read()
+// console.log(calculator.sum());
+// console.log(calculator.mul());
+
+///////////////////////////////////////////////////////////////////////////////
+// There’s a ladder object that allows you to go up and down:
+
+// let ladder = {
+//   step: 0,
+//   up() {
+//     this.step++;
+//   },
+//   down() {
+//     this.step--;
+//   },
+//   showStep: function() { // shows the current step
+//     alert( this.step );
+//   }
+// };
+// Now, if we need to make several calls in sequence, we can do it like this:
+
+// ladder.up();
+// ladder.up();
+// ladder.down();
+// ladder.showStep(); // 1
+// ladder.down();
+// ladder.showStep(); // 0
+// Modify the code of up, down, and showStep to make the calls chainable, like this:
+// ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
+
+
+
+// let ladder = {
+//   step: 0,
+//   up() {
+//       this.step++;
+//       return this
+//   },
+//   down() {
+//       this.step--;
+//       return this
+//   },
+//   showStep: function() { // shows the current step
+//       alert(this.step);
+//       return this
+//   }
+// };
+
+// ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
+
+
+// function User(name) {
+//     this.name = name;
+//     this.isAdmin = false;
+// }
+  
+// let user = new User("ali")
+// console.log(user);
