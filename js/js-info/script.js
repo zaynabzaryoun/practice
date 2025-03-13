@@ -768,3 +768,44 @@
   
 // let user = new User("ali")
 // console.log(user);
+
+
+
+// function Calculator(){
+//     this.read = function(){
+//         this.a = +prompt("a?")
+//         this.b = +prompt("b?")
+//     }
+//     this.sum = function(){
+//         return this.a+this.b
+//     }
+//     this.mul = function(){
+//         return this.a*this.b
+//     }
+// }
+
+// let calculator = new Calculator()
+// calculator.read()
+// alert("sum" + calculator.sum())
+// alert("mul" + calculator.mul())
+
+
+// function Accumulator(startingValue) {
+//     this.value = startingValue
+//     this.read = function(){
+//         this.value += +prompt("value?")
+//     }
+// }
+
+// let accumulator = new Accumulator(1)
+// accumulator.read()
+// accumulator.read()
+// alert(accumulator.value)
+
+
+// let user = { 
+//     name: "ali"
+//   };
+//   let id = Symbol("id");
+//   user[id] = 1;
+//   alert( user[id] );
