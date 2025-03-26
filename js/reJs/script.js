@@ -447,20 +447,144 @@
 // console.log(a);
 
 
-const user = {
-    name: " sara",
-    age: 30,
-    lastname: "dd",
-    "likes books": true,
-}
-const json = JSON.stringify(user)
-console.log(json);
-const obj = JSON.parse(json)
-console.log(obj);
+// const user = {
+//     name: " sara",
+//     age: 30,
+//     lastname: "dd",
+//     "likes books": true,
+// }
+// const json = JSON.stringify(user)
+// console.log(json);
+// const obj = JSON.parse(json)
+// console.log(obj);
 
-console.log(localStorage.getItem("test"));
-console.log(JSON.parse(localStorage.getItem("test")));
+// console.log(localStorage.getItem("test"));
+// console.log(JSON.parse(localStorage.getItem("test")));
+
+// console.log([..."lydia"]);
+
+// const user = { name: "lydia", level: 19, health: 90 }
+// const data = JSON.stringify(user, ["level", "health"])
+// console.log(data);
 
 
-
+// const shape = {
+//     radius: 10,
+//     diameter() {
+//         return this.radius * 2
+//     },
+//     perimeter: () => 2 * this.radius * Math.PI
+// }
+// console.log(shape.diameter());
+//  console.log(shape.perimeter());
  
+ 
+// const user = {
+//     name: " sara",
+//     age: 30,
+//     lastname: "dd",
+//     "likes books": true,
+//     fullname: {
+//         firstname: "sara",
+//         lastname: "dd"
+//     }
+// }
+
+// const name = user.name
+// console.log(name);
+// const { name, age, ...rest } = user
+
+// console.log(name,  age, typeof rest);
+
+// const { name, "likes books": likesBooks } = user
+// console.log(name, likesBooks, user);
+
+// const { fullname: {firstname}, } = user
+// console.log(fullname);
+// console.log(firstname);
+
+// function getItems(fruitList, favoriteFruit, ...args) {
+//     return [...fruitList, ...args, favoriteFruit];
+// }
+
+// console.log(getItems(["banana", "apple"], "pear", "orange"));
+
+
+// let person = { name: "lydia" }
+// const member = [person]  //[{ name: "lydia" }]
+// person = null
+// console.log(member)
+
+// const value = { number: 10 }
+// const multiply = (x = {...value}) => {
+//     console.log((x.number *= 2));
+// }
+
+// multiply()
+// multiply()
+// multiply(value)
+// multiply(value)
+
+// function changeAgeAndReference(person) {
+//     person.age = 25;
+//     person = {
+//         name: "john",
+//         age: 50
+//     }
+//     return person
+// }
+// const personObj1 = {
+//     name: "alex",
+//     age: 30
+// }
+
+// const personObj2 = changeAgeAndReference(personObj1)
+// console.log(personObj1);
+// console.log(personObj2);
+
+
+// const user1 = {
+//     name: "sara",
+//     age: 20,
+//     address: {
+//         city: "new york",
+//         country: "usa"
+//     }
+// }
+
+// // const user2 = user1
+// // user1.name = "ali"
+// // console.log(user1, user2);
+
+
+// // const userCopy = { ...user1 }
+// const userCopy = Object.assign({}, user1)
+// userCopy.name = "ali"
+// userCopy.address.city = "los angeles"
+// console.log(user1, userCopy);
+
+
+// const userCopy = structuredClone(user1)
+// userCopy.name = "john"
+// userCopy.address.city = "los angeles"
+// console.log(user1, userCopy);
+
+// const userCopy = JSON.parse(JSON.stringify(user1))
+// userCopy.address.city = "ggggg"
+// console.log(user1, userCopy);
+
+
+// console.log(this);
+// this.a = 5
+// console.log(a);
+
+function getParam() {
+    console.log(this);
+}
+getParam()
+
+const getParam2 = () => {
+    console.log(this);
+}
+
+getParam()
