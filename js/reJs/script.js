@@ -578,13 +578,178 @@
 // this.a = 5
 // console.log(a);
 
-function getParam() {
-    console.log(this);
-}
-getParam()
+// function getParam() {
+//     console.log(this);
+// }
+// getParam()
 
-const getParam2 = () => {
-    console.log(this);
-}
+// const getParam2 = () => {
+//     console.log(this);
+// }
 
-getParam()
+// getParam()
+
+// class Person{
+//     constructor(name, age) {
+//         this.name = name
+//         this.age = age
+//     }
+//     greet() {
+//         console.log(`hello i am ${this.name} and im ${this.age} years old`);
+//     }
+// }
+// const person1 = new Person("sara", 30)
+// console.log(person1.name);
+// person1.greet()
+
+
+// const user = {
+//     firsname: "saraaaaaaaaaa",
+//     getName() {
+//         const firsname = "sara"
+//         return this.firsname
+//     }
+// }
+
+// console.log(user.getName());
+
+// function makeUser(){
+//     return {
+//         name: "john",
+//         ref(){
+//         return this
+//         }
+//     }
+// }
+
+// let user = makeUser()
+// console.log(user.ref().name);
+
+
+// const user = {
+//     name: "sara bbb",
+//     logMessage() {
+//         console.log(this.name);
+//     }
+// }
+// setTimeout(() => {
+//     user.logMessage()
+// }, 1000)
+
+
+// let calculator = {
+//     read() {
+//         this.n1 = +prompt("n1?", 0)
+//         this.n2 = +prompt("n2?", 0)
+//     },
+//     sum() {
+//         return `sum: ${this.n1 + this.n2}`
+//     },
+//     mul() {
+//         return `mul: ${this.n1 * this.n2}`
+//     }
+// }
+// calculator.read()
+// console.log(calculator.sum());
+// console.log(calculator.mul());
+
+var length = 4;
+// function callback() {
+//     console.log(this.length);
+// }
+// const object = {
+//     length: 5,
+//     method(fn) {
+//         fn()
+//     }
+// }
+// object.method(callback)
+
+
+// function callback() {
+//     console.log(this.length);
+// }
+// const object = {
+//     length: 5,
+//     method() {
+//         arguments[0]()
+//     }
+// }
+// object.method(callback, 2, 3)
+
+// const calc = {
+//     total: 0,
+//     add(n1) {
+//         this.total += n1;
+//         return this
+//     },
+//     multiply(n2) {
+//          this.total *= n2
+//         return this
+//     },
+//     subtract(n3) {
+//          this.total -= n3
+//         return this
+//     }
+// }
+
+// const result = calc.add(10).multiply(5).subtract(30).add(10);
+// console.log(result.total);
+
+// var obj = { name: "sara" }
+// function sayHello(age) {
+//     return "hello im " + this.name + " and " + age + " old";
+// }
+// console.log(sayHello(34));
+
+
+// var obj = { name: "sara" }
+// function sayHello(age) {
+//     return "hello im " + this.name + " and " + age + " old";
+// }
+// console.log(sayHello.call(obj, 34));
+
+// var obj = { name: "sara" }
+// function sayHello(age, profession) {
+//     return "hello im " + this.name + " and " + age + " old and a " + profession;
+// }
+// console.log(sayHello.call(obj, 34, "doctor"));
+
+
+// var obj = { name: "sara" }
+// function sayHello(age, profession) {
+//     return "hello im " + this.name + " and " + age + " old and a " + profession;
+// }
+// console.log(sayHello.apply(obj, [34, "doctor"]));
+
+// var obj = {
+//     name: "sara"
+// }
+
+// function sayHello(age, profession) {
+//     return "hello im " + this.name + ", " + age  + " and a " + profession
+// }
+
+// const returnedBoundFunc = sayHello.bind(obj, 34, "doctor")
+// console.log(returnedBoundFunc());
+// console.log(returnedBoundFunc());
+// console.log(returnedBoundFunc());
+
+// const person = {name: "sara"}
+// function sayHi(age) {
+//     return `${this.name} is ${age}`
+// }
+
+// console.log(sayHi.call(person, 24));
+// console.log(sayHi.bind(person, 24));
+
+const age = 10
+var person = {
+    name: "sara",
+    age: 20,
+    getAge:function(){
+        return this.age
+    }
+}
+var person2 = { age: 24 }
+person.getAge.call(person2)
