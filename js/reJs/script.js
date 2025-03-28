@@ -743,13 +743,55 @@ var length = 4;
 // console.log(sayHi.call(person, 24));
 // console.log(sayHi.bind(person, 24));
 
-const age = 10
-var person = {
-    name: "sara",
-    age: 20,
-    getAge:function(){
-        return this.age
-    }
-}
-var person2 = { age: 24 }
-person.getAge.call(person2)
+// const age = 10
+// var person = {
+//     name: "sara",
+//     age: 20,
+//     getAge:function(){
+//         return this.age
+//     }
+// }
+// var person2 = { age: 24 }
+// console.log(person.getAge.call(person2));
+
+
+// var status = "cool"
+// setTimeout(() => {
+//     const status = "heart"
+//     const data = {
+//         status: "green",
+//         getStatus() {
+//             return this.status
+//         }
+//     }
+
+//     console.log(data.getStatus());
+//     console.log(data.getStatus.call(this));
+// }, 0)
+
+// const animals = [
+//     { species: "lion", name: "king" },
+//     {species:"whale", name: "queen"}
+// ]
+
+// function printAnimals(i) {
+//     this.print = function (){
+//         console.log("#" + i + this.species + ": " + this.name);
+//     }
+//     this.print()
+// }
+// for (let i = 0; i < animals.length; i++){
+//     printAnimals.call(animals[i], i+1)
+// }
+
+
+// const array = ["a", "b"]
+// const element = [0, 1, 2]
+
+// array.push.apply(array, element)
+// console.log(array);
+
+// array.push(...element)
+// console.log(array);
+
+
