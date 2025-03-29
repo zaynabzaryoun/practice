@@ -794,4 +794,61 @@ var length = 4;
 // array.push(...element)
 // console.log(array);
 
+// function f() {
+//     console.log(this);
+// }
+// let user = {
+//     g: f.bind(null)
+// }
+// user.g()
+// function f() {
+//     console.log(this.name);
+// }
+// f = f.bind({ name: "john" }).bind({ name: "ann" })
+// f()
 
+// function checkPassword(success, failed) {
+//     let password = prompt("password?", "")
+//     if (password == "roadside Coder") success()
+//     else failed()
+// }
+
+// let user = {
+//     name: "sara",
+//     loginSuccessfull() {
+//         console.log(`${this.name} logged in`);
+//     },
+//     loginFailed() {
+//         console.log(`${this.name} failed to log in`);
+//     },
+// }
+
+// checkPassword(user.loginSuccessfull.bind(user), user.loginFailed.bind(user))
+
+// function checkPassword(ok, fail) {
+//     let password = prompt("password? ", "")
+//     if (password == "hello") ok();
+//     else fail()
+// }
+// let user = {
+//     name: "sara ahmadi",
+//     login(result) {
+//         console.log(this.name + (result? " login successful" : " login failed"));
+//     }
+// }
+// // console.log(user.login.bind(user));
+
+// checkPassword(user.login.bind(user, true), user.login.bind(user, false))
+
+// const age = 10;
+// var person = {
+//     name: "sara",
+//     age: 20,
+//     getAgeArrow: () => console.log(this.age),
+//     getAge: function () {
+//         console.log(this.age);
+//     }
+// }
+// var person2 = { age: 24 }
+// person.getAge.call(person2);
+// person.getAgeArrow.call(person2);
