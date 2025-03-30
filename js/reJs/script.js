@@ -852,3 +852,56 @@ var length = 4;
 // var person2 = { age: 24 }
 // person.getAge.call(person2);
 // person.getAgeArrow.call(person2);
+
+// console.log("start")
+
+// for (let i = 0; i < 1e9; i++) {}
+
+
+// console.log("end");
+
+// console.log("start");
+// setTimeout(() => console.log("async task"), 0)
+// console.log("bye");
+
+// console.log("start");
+// async function importantAction(username) {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve(`subscribe to ${username}`)
+//         }, 1000)
+//     })
+// }
+
+// async function run(){
+//     const msg = await importantAction("bird")
+//     console.log(msg);
+//     console.log('end');
+// }
+// run()
+
+
+// console.log("start");
+// function importantAction(username) {
+//      setTimeout(() => {
+//            return `subscribe to ${username}`
+//       }, 1000)
+// }
+   
+// const msg = importantAction("bird")
+// console.log("end");
+
+// console.log("start");
+
+//  function importantAction(username, callback) {
+//     setTimeout(() => {
+//         callback(`subscribe to ${username}`)
+//     }, 1000)
+// }
+
+// const msg = importantAction("bird", (msg) => console.log(msg))
+
+
+// console.log("end");
+
+
