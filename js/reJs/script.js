@@ -904,4 +904,68 @@ var length = 4;
 
 // console.log("end");
 
+// function delayedHello(callback) {
+//     setTimeout(() => {
+//         callback("Hello");
+//     }, 2000);
+// }
 
+// delayedHello((message) => console.log(message));
+
+// function delayedMessage(msg, cb) {
+//     setTimeout(() => {
+//         cb(msg)
+//     }, 2000)
+// }
+// delayedMessage("Hello, World!", console.log);
+
+
+// function delayedMultiply(n1, n2, cb) {
+//     setTimeout(() => {
+//         cb(n1*n2)
+//     },3000)
+// }
+
+// delayedMultiply(3, 4, console.log);
+
+
+// function greetUser(name, cb) {
+//     setTimeout(() => {
+//         cb(`hello ${name}`)
+//     },2000)
+// }
+// greetUser("Zaynab", console.log);
+
+
+// function generateRandomNumber(cb) {
+//     setTimeout(() => {
+//         let random = Math.floor(Math.random() * 10) + 1
+//     cb(random)
+//     },2000);
+// }
+
+// generateRandomNumber(console.log);
+
+// console.log("start")
+// function importantAction(username, cb) {
+//     setTimeout(() => {
+//         cb(`subscribe to ${username}`)
+//     },0)
+// }
+
+// function likeTheVideo(video, cb) {
+//     setTimeout(() => {
+//         return cb(`likes the ${video}`)
+//     },1000)
+// }
+
+// const message = importantAction("sara", function (msg) {
+//     console.log(msg);
+//     likeTheVideo("video 1 ", action => {
+//         console.log(action);
+        
+//     })
+    
+// })
+
+// console.log("stop");
