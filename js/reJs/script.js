@@ -1,4 +1,3 @@
-
 // console.log(count)
 // let count = 1
 // var count2 = 2
@@ -8,7 +7,6 @@
 //     var a = 10
 // }
 // abc()
-
 
 // function abc() {
 //     console.log(a, b, c);
@@ -23,7 +21,7 @@
 //         var a = 10
 //     }
 //     console.log(a);
-    
+
 // }
 // example()
 
@@ -36,7 +34,7 @@
 //         let y = 20
 //     }
 //     console.log(y);
-    
+
 // }
 
 // example()
@@ -91,14 +89,11 @@
 // for (let student of students) {
 //     console.log(student);
 //     console.log(students);
-    
-    
+
 // }
 
 // const moreThanSixty = students.filter(student => student.marks > 60)
 // console.log(moreThanSixty);
-
-
 
 // const moreThanSixtyAndRollNumGreaterThanFifteen = students.filter(student => student.marks > 60 && student.rollNumber>15)
 // console.log(moreThanSixtyAndRollNumGreaterThanFifteen);
@@ -106,14 +101,12 @@
 //     console.log("accc", acc);
 //     console.log("curr", cur.marks);
 //     return acc + cur.marks
-    
+
 //  }, 0)
 // console.log(sumOfMark);
 
-
 // const nameOfMoreThanSixty = students.filter(student => student.marks > 60).map(student => student.name)
 // console.log(nameOfMoreThanSixty);
-
 
 // function square(num) {
 //     return num * num
@@ -129,33 +122,31 @@
 
 // (function square(num) {
 //     console.log(num * num);
-    
+
 // })(5)
 
 // (function (x) {
 //     return (
 //         function (y) {
 //             console.log(x);
-            
+
 //         }
 //     )(2)
 // })(1)
 
-
 // function testScope() {
 //     let x = 10
 //     console.log(x);
-    
+
 // }
 // testScope()
 // console.log(x);
-
 
 // function outer() {
 //     let outerVar = "im outer!"
 //     function inner() {
 //         console.log(outerVar);
-        
+
 //     }
 //     inner()
 // }
@@ -166,7 +157,7 @@
 //     let message = "hello from outer!"
 //     function inner() {
 //         console.log(message);
-        
+
 //     }
 
 //     return inner
@@ -177,9 +168,9 @@
 // for (var i = 0; i < 5; i++){
 //     setTimeout(function () {
 //         console.log(i);
-        
+
 //     }, i * 1000)
-    
+
 // }
 
 // var x = 21;
@@ -201,15 +192,14 @@
 // function display(nums, ...rest) {
 //     console.log(nums);
 //     console.log(rest);
-    
-    
+
 // }
 // const arr = [1, 3, 4]
 // display(...arr)
 
 // const fn = (a, ...nums, x, y) => {
 //     console.log(x, y);
-    
+
 // }
 // fn(5, 6 ,7 ,8)
 
@@ -224,11 +214,7 @@
 
 // processUserInput(greeting)
 
-
 // Write a program that asks the user to enter a number. Then, pass this number to a callback function that either squares the number or doubles it, based on a second callback.
-
-
-
 
 // function double(n) {
 //     return 2*n
@@ -250,7 +236,6 @@
 // const double2 = (n) => {return n * 2}
 // console.log(double1(4));
 
-
 // function fn() {
 //     console.log(arguments);
 // }
@@ -271,16 +256,15 @@
 // console.log(sum(4, 6, 10));
 
 // const user = {
-    
-    
+
 //     firstname: "sara",
 //     fn1() {
 //         console.log("regular func: ", this);
-        
+
 //     },
 //     fn2: () => {
 //         console.log("arrow func: ", this);
-        
+
 //     }
 // }
 // user.fn1()
@@ -299,7 +283,6 @@
 // const person1 = new Person("sara")
 // console.log(person1.name);
 
-
 // function f(a) {
 //     return function (b) {
 //         return `${a} ${b}`
@@ -317,23 +300,22 @@
 // const add = (a) => (b) => a + b
 // console.log(add(4)(7));
 
-
 // function evaluate(operation) {
 //     return function (n1) {
 //         return function (n2) {
 //             switch (operation) {
 //                 case "sum":
 //                     return n1 + n2;
-                   
+
 //                 case "multiply":
 //                     return n1 * n2
-                    
+
 //                 case "divide":
 //                     return n1 / n2;
-                   
+
 //                 case "substract":
 //                     return n1 - n2
-                     
+
 //                 default:
 //                     return "invalid operation"
 //             }
@@ -361,7 +343,6 @@
 
 // console.log(sum(1)(2)(3)(4)(5)());
 
-
 // function sum(a) {
 //     return function (b, c) {
 //         return a + b + c
@@ -374,7 +355,6 @@
 // // }
 
 // console.log(x(3, 4));
-
 
 // function updateElementText(id) {
 //     return function (content) {
@@ -396,7 +376,6 @@
 // console.log(user["age"]);
 // delete user["lastname"]
 // console.log(user);
-
 
 // const func = (function (a) {
 //     delete a;
@@ -437,7 +416,6 @@
 
 // console.log(multiplyByTwo(nums));
 
-
 // const a = {}
 // const b = { key: "b" }
 // const c = { key: "c" }
@@ -445,7 +423,6 @@
 // a[c] = 456
 // // console.log(a[b]);
 // console.log(a);
-
 
 // const user = {
 //     name: " sara",
@@ -467,7 +444,6 @@
 // const data = JSON.stringify(user, ["level", "health"])
 // console.log(data);
 
-
 // const shape = {
 //     radius: 10,
 //     diameter() {
@@ -477,8 +453,7 @@
 // }
 // console.log(shape.diameter());
 //  console.log(shape.perimeter());
- 
- 
+
 // const user = {
 //     name: " sara",
 //     age: 30,
@@ -508,7 +483,6 @@
 // }
 
 // console.log(getItems(["banana", "apple"], "pear", "orange"));
-
 
 // let person = { name: "lydia" }
 // const member = [person]  //[{ name: "lydia" }]
@@ -542,7 +516,6 @@
 // console.log(personObj1);
 // console.log(personObj2);
 
-
 // const user1 = {
 //     name: "sara",
 //     age: 20,
@@ -556,13 +529,11 @@
 // // user1.name = "ali"
 // // console.log(user1, user2);
 
-
 // // const userCopy = { ...user1 }
 // const userCopy = Object.assign({}, user1)
 // userCopy.name = "ali"
 // userCopy.address.city = "los angeles"
 // console.log(user1, userCopy);
-
 
 // const userCopy = structuredClone(user1)
 // userCopy.name = "john"
@@ -572,7 +543,6 @@
 // const userCopy = JSON.parse(JSON.stringify(user1))
 // userCopy.address.city = "ggggg"
 // console.log(user1, userCopy);
-
 
 // console.log(this);
 // this.a = 5
@@ -602,7 +572,6 @@
 // console.log(person1.name);
 // person1.greet()
 
-
 // const user = {
 //     firsname: "saraaaaaaaaaa",
 //     getName() {
@@ -625,7 +594,6 @@
 // let user = makeUser()
 // console.log(user.ref().name);
 
-
 // const user = {
 //     name: "sara bbb",
 //     logMessage() {
@@ -635,7 +603,6 @@
 // setTimeout(() => {
 //     user.logMessage()
 // }, 1000)
-
 
 // let calculator = {
 //     read() {
@@ -664,7 +631,6 @@ var length = 4;
 //     }
 // }
 // object.method(callback)
-
 
 // function callback() {
 //     console.log(this.length);
@@ -702,7 +668,6 @@ var length = 4;
 // }
 // console.log(sayHello(34));
 
-
 // var obj = { name: "sara" }
 // function sayHello(age) {
 //     return "hello im " + this.name + " and " + age + " old";
@@ -714,7 +679,6 @@ var length = 4;
 //     return "hello im " + this.name + " and " + age + " old and a " + profession;
 // }
 // console.log(sayHello.call(obj, 34, "doctor"));
-
 
 // var obj = { name: "sara" }
 // function sayHello(age, profession) {
@@ -754,7 +718,6 @@ var length = 4;
 // var person2 = { age: 24 }
 // console.log(person.getAge.call(person2));
 
-
 // var status = "cool"
 // setTimeout(() => {
 //     const status = "heart"
@@ -783,7 +746,6 @@ var length = 4;
 // for (let i = 0; i < animals.length; i++){
 //     printAnimals.call(animals[i], i+1)
 // }
-
 
 // const array = ["a", "b"]
 // const element = [0, 1, 2]
@@ -857,7 +819,6 @@ var length = 4;
 
 // for (let i = 0; i < 1e9; i++) {}
 
-
 // console.log("end");
 
 // console.log("start");
@@ -880,14 +841,13 @@ var length = 4;
 // }
 // run()
 
-
 // console.log("start");
 // function importantAction(username) {
 //      setTimeout(() => {
 //            return `subscribe to ${username}`
 //       }, 1000)
 // }
-   
+
 // const msg = importantAction("bird")
 // console.log("end");
 
@@ -900,7 +860,6 @@ var length = 4;
 // }
 
 // const msg = importantAction("bird", (msg) => console.log(msg))
-
 
 // console.log("end");
 
@@ -919,7 +878,6 @@ var length = 4;
 // }
 // delayedMessage("Hello, World!", console.log);
 
-
 // function delayedMultiply(n1, n2, cb) {
 //     setTimeout(() => {
 //         cb(n1*n2)
@@ -928,14 +886,12 @@ var length = 4;
 
 // delayedMultiply(3, 4, console.log);
 
-
 // function greetUser(name, cb) {
 //     setTimeout(() => {
 //         cb(`hello ${name}`)
 //     },2000)
 // }
 // greetUser("Zaynab", console.log);
-
 
 // function generateRandomNumber(cb) {
 //     setTimeout(() => {
@@ -963,9 +919,125 @@ var length = 4;
 //     console.log(msg);
 //     likeTheVideo("video 1 ", action => {
 //         console.log(action);
-        
+
 //     })
-    
+
 // })
+
+// console.log("stop");
+
+// const myPromise = new Promise((resolve, reject) => {
+//   let success = false;
+//   setTimeout(() => {
+//     if (success) {
+//       resolve("op successful");
+//     } else {
+//       reject("failed");
+//     }
+//   }, 2000);
+// });
+
+// myPromise.then((msg) => console.log(msg)).catch((err) => console.log(err));
+
+
+// const myPromise = new Promise((res, rej) => {
+//     let success = false
+//     setTimeout(() => {
+//         if (success) {
+//             res("successful")
+//         } else {
+//             rej("reject")
+//         }
+//     }, 2000)
+// })
+
+// async function fetchData() {
+//     try {
+//         let result = await myPromise;
+//         console.log(result);
+//     } catch (err) {
+//         console.log("error", err);
+//     }
+// }
+// fetchData()
+// const p1 = new Promise(res => setTimeout(() => {res("p1")}, 1000))
+// const p2 = new Promise(res => setTimeout(() => { res("p2") }, 2000))
+// const p3 = new Promise(res => setTimeout(() => { res("p3") }, 3000))
+
+// Promise.all([p1, p2, p3])
+//     .then(results => console.log("results:", results))
+//     .catch(error => console.log("error: ", error))
+
+// Promise.race([p1, p2, p3])
+//     .then(result => console.log("dirst result:", result))
+//     .catch(err => console.log("error:", err))
+
+// console.log("start");
+
+// const sub = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let success = true
+//         if (success) resolve("subsicribe to channel");
+//         else reject(new Error("failed to subcribe"))
+//     }, 2000)
+// })
+//     sub.then((res) => {
+//         console.log(res);
+//     }).catch(err => {
+//         console.log(err);
+//     })
+
+//     console.log(sub);
+    
+
+// console.log("end")
+
+
+// const sub = Promise.reject("subscribe failed!")
+// console.log(sub);
+
+// sub.catch(err => console.log(err)
+// )
+
+//  Promise.resolve("subscribe successful!")
+// .then(msg => console.log(msg)
+// )
+
+
+
+// console.log("start")
+// function importantAction(username) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(`subscribe to ${username}`)
+//         },0)
+//     })
+// }
+
+// function likeTheVideo(video) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             return resolve(`likes the ${video}`)
+//         },1000)
+//     })
+// }
+
+// function shareTheVideo(video) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             return resolve(`sahre the ${video} video`)
+//         },1000)
+//     })
+// }
+
+// importantAction("helloooo").then((res) => {
+//     console.log(res);
+//     likeTheVideo("js video").then((res) => {
+//         console.log(res)
+//         shareTheVideo("js video").then((res) => {
+//             console.log(res)
+//         })
+//     })
+// }).catch((err) => console.log(err))
 
 // console.log("stop");
