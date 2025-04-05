@@ -38,3 +38,86 @@
 
 
 
+const isEvent = 10 % 2 === 0 ? true : false
+// console.log(isEvent);
+
+// console.log(true + "5");
+
+// console.log("4" - "2");
+
+// console.log("5" * "3");
+
+// console.log("6" / "2");
+
+// console.log(('5' - 4));
+
+// console.log("hi" - "bye");
+
+// console.log("5" - true);
+
+// console.log("5" - false);
+
+// console.log(1+true);
+
+// console.log(4 - null);
+
+// console.log(4 + undefined);
+
+// console.log(Number(false));
+
+// console.log(Number(true));
+
+// console.log(Number("5"));
+
+// console.log(Number("hello"));
+
+// console.log(typeof +"6");
+// console.log("6");
+
+// console.log(parseInt("6"));
+
+// console.log(parseFloat("5.7"));
+
+// console.log(String(600));
+
+// console.log(String(null));
+
+// console.log(String(undefined));
+
+// console.log(true.toString());
+
+// console.log((1).toString());
+
+// console.log(Boolean(666));
+
+// console.log(Boolean(0));
+// console.log(Boolean(""));
+// console.log(Boolean(null));
+// console.log(Boolean(undefined));
+// console.log(Boolean(NaN));
+
+const v1 = "test"
+const v2 = "test"
+
+console.log(v1 == v2);
+console.log(v1 === v2);
+
+const a = 10
+
+const b = "10"
+
+console.log(a == b);
+console.log(a===b);
+
+
+
+
+
+
+
+
+
+
+
+
+
