@@ -96,28 +96,117 @@ const isEvent = 10 % 2 === 0 ? true : false
 // console.log(Boolean(undefined));
 // console.log(Boolean(NaN));
 
-const v1 = "test"
-const v2 = "test"
+// const v1 = "test"
+// const v2 = "test"
 
-console.log(v1 == v2);
-console.log(v1 === v2);
+// console.log(v1 == v2);
+// console.log(v1 === v2);
 
-const a = 10
+// const a = 10
 
-const b = "10"
+// const b = "10"
 
-console.log(a == b);
-console.log(a===b);
-
-
+// console.log(a == b);
+// console.log(a===b);
 
 
+// console.log(0 == "");
+// console.log(0 === "");
+
+// console.log(null == "");
+// console.log(null === undefined);
+// console.log(null == undefined);
+
+// console.log(null == undefined);
+// console.log(undefined == 0);
+// console.log(undefined == "");
 
 
+// const a = 5
+// if (a > 0) {
+//     console.log("a is positive");
+    
+// } else if(a < 0){
+//     console.log("not negative");
+    
+// } else {
+//     console.log("it is 0");
+    
+// }
+
+// switch (a>0) {
+//     case true:
+//         console.log("a is positive");
+//         break;
+//     case false:
+//         console.log("not positive");
+//         break;
+//     default:
+//         console.log("invalid number");
+          
+// }
+
+// let i = 1
+// while (i <= 5) {
+//     console.log(i);
+//     i += 1
+// }
 
 
+// let i = 1
+// do {
+//     console.log(i);
+//     i += 1
+// } while(i <= 5)
 
 
+// const arr = [2, 4, 6, 8]
+
+// for (const num of arr) {
+//     console.log(num);
+// }
+
+// function greet(name) {
+//     return `hello ${name}`
+// }
+
+// greet("sara")
+// console.log(greet("ali"));
+
+// function sum (a, b){
+//     return a + b
+// }
+
+// console.log(sum(5,6));
+// console.log(sum(2,6));
+// console.log(sum(5,8));
 
 
+// const sum = (a, b) => {
+//     return a + b
+// }
 
+// const sum  = (a,b) => a+b
+
+// console.log(sum(4, 6));
+
+
+// if (true) {
+//     const myname = "ggg"
+//     let age = 7
+// }
+
+// console.log(myname);
+
+const t = 10
+function test() {
+    var myname = "gg"
+    // const myname = "gg"
+    // let myname = "gg"
+    console.log(myname);
+    console.log(t);
+    
+    
+}
+test()
+console.log(myname);
