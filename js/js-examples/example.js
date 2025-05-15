@@ -494,9 +494,9 @@ const arrr = [1, 2, 3, 4, 5, 6]
 //14-part 1:
 //What will be the output of the following code snippet, and why?
 // const original = [1, 2, 3];
-// const nested = [4, 5, original]; 
-// const flatCopy = [...nested]; 
-// flatCopy[2][0] = 99; 
+// const nested = [4, 5, original];
+// const flatCopy = [...nested];
+// flatCopy[2][0] = 99;
 
 
 // console.log(nested[2][0]); // ?
@@ -557,12 +557,12 @@ const arrr = [1, 2, 3, 4, 5, 6]
 //part2: Rewrite the function to also return the maximum value from rest, defaulting to 0 if rest is empty.
 
 // function processValues(a, b, ...rest) {
-//   const sum = rest.reduce((acc, val) => acc + val, 0); 
+//   const sum = rest.reduce((acc, val) => acc + val, 0);
 //   const filteredRest = rest.filter(e => typeof(e) === "number" && !isNaN(e)) || 0
 //   console.log(filteredRest);
 
-//   const maxOfRest = filteredRest.length > 0 ? Math.max(...filteredRest) : 0; 
-//   const [x, y = 10, ...remaining] = rest; 
+//   const maxOfRest = filteredRest.length > 0 ? Math.max(...filteredRest) : 0;
+//   const [x, y = 10, ...remaining] = rest;
   
 //   return {
 //     max: maxOfRest,
@@ -581,33 +581,33 @@ const arrr = [1, 2, 3, 4, 5, 6]
 // You have an array of objects representing students. Each student object has the following properties: name (a string) and score (a number). Your task is to create a new array that contains the names of students who have scored above 50, and then return that array in uppercase letters.
 
 
-const students = [  
-  { name: "Alice", score: 45 },  
-  { name: "Bob", score: 80 },  
-  { name: "Charlie", score: 55 },  
-  { name: "David", score: 30 },  
-  { name: "Eva", score: 65 }  
-];
+// const students = [
+//   { name: "Alice", score: 45 },
+//   { name: "Bob", score: 80 },
+//   { name: "Charlie", score: 55 },
+//   { name: "David", score: 30 },
+//   { name: "Eva", score: 65 }
+// ];
 
-const arr = []
-const studentsName = students.map(student => {
-  if (student.score > 50) {
-    console.log(student.name.toUpperCase());
-    return student.name.toUpperCase();
-  } else {
-    return undefined
-  }
+// const arr = []
+// const studentsName = students.map(student => {
+//   if (student.score > 50) {
+//     console.log(student.name.toUpperCase());
+//     return student.name.toUpperCase();
+//   } else {
+//     return undefined
+//   }
 
-}).filter(name => name!==undefined)
+// }).filter(name => name!==undefined)
 
-// console.log(studentsName);
+// // console.log(studentsName);
 
 
-const names = students.filter((student) => {
- return student.score > 50
-}).map(e=>e.name.toUpperCase())
+// const names = students.filter((student) => {
+//  return student.score > 50
+// }).map(e=>e.name.toUpperCase())
 
-console.log(names);
+// console.log(names);
 
 
 //////////////////////////////////////////////////////- 17 -//////////////////////////////////////////////////////////////
@@ -955,7 +955,7 @@ Increments the private field tracking how many times the book has been opened. *
 //     if (!response.ok) {
 //         throw new Error("Network response was not ok " + response.statusText)
 //     } else {
-//       console.log(response.ok);  
+//       console.log(response.ok);
 //       console.log("response obj:", response);
 //       return response.json()
 //     }
@@ -966,3 +966,96 @@ Increments the private field tracking how many times the book has been opened. *
         
 //     })
 
+
+
+////////////////////////////////////////////////////////////////////////
+// Write a function called sumArray that takes an array of numbers and returns the sum of all the numbers.
+
+// function sumArray(array) {
+//   let sum = 0
+//   array.forEach(n => sum += n)
+//   return sum
+// }
+
+
+// console.log(sumArray([1, 2, 3, 4, 10]))
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+// Write a function called countVowels that takes a string and returns the number of vowels (a, e, i, o, u) in the string.
+
+// function countVowels(string) {
+//   let sum = 0
+//   let newString = string.toLowerCase()
+//   for (let s  of newString) {
+  
+//     switch (s) {
+//       case "a":
+//         sum += 1;
+//         break
+//       case "e":
+//         sum += 1;
+//         break
+//       case "i":
+//         sum += 1;
+//         break
+//       case "o":
+//         sum += 1;
+//         break
+//       case "u":
+//         sum += 1;
+//         break
+
+//     }
+//   };
+//   return sum
+// }
+
+// console.log(countVowels("hUEelloo"))
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+// Write a function called fizzBuzz that takes a number n and prints all the numbers from 1 to n. But:
+
+// If the number is divisible by 3, print "Fizz" instead of the number.
+
+// If the number is divisible by 5, print "Buzz" instead of the number.
+
+// If the number is divisible by both 3 and 5, print "FizzBuzz".
+
+// Otherwise, just print the number.
+
+
+// function fizzBuzz(n) {
+//   for (let i = 1; i <= n; i++){
+//     if (i % 3===0) {
+//       console.log("Fizz")
+//     } else if (i % 5===0) {
+//       console.log("Buzz")
+//     } else if (i % 15===0) {
+//       console.log("FizzBuzz")
+//     } else {
+//         console.log(i)
+//     }
+//   }
+// }
+
+// fizzBuzz(19)
+
+//////////////////////////////////////////////////////////////////////////
+
+// Write a function called secondLargest that takes an array of numbers and returns the second largest number.
+
+// If the array has less than 2 unique numbers, return null.
+
+function secondLargest(arr) {
+  let sorted = arr.sort((a, b) => a - b)
+  console.log(sorted)
+  return arr[arr.length - 2]
+}
+
+console.log(secondLargest([3, 6, 1 , 12, 55, 2]))
