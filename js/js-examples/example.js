@@ -1052,10 +1052,53 @@ Increments the private field tracking how many times the book has been opened. *
 
 // If the array has less than 2 unique numbers, return null.
 
-function secondLargest(arr) {
-  let sorted = arr.sort((a, b) => a - b)
-  console.log(sorted)
-  return arr[arr.length - 2]
+// function secondLargest(arr) {
+  
+//   let uniqueArr = [...new Set(arr)]
+//   if (uniqueArr.length < 2) {
+//     return null;
+//   }
+//   let sorted = uniqueArr.sort((a, b) => a - b)
+//   return sorted[sorted.length - 2]
+// }
+
+// console.log(secondLargest([3, 6, 1, 12, 12, 55, 2]))
+// console.log(secondLargest([4, 4 ,4]))
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Write a function longestUniqueSubstring(s) that takes a string s and returns the length of the longest substring without repeating characters.
+
+// longestUniqueSubstring("abcabcbb");
+// Output: 3   -> "abc"
+
+// longestUniqueSubstring("bbbbb");
+// Output: 1   -> "b"
+
+// longestUniqueSubstring("pwwkew");
+// Output: 3   -> "wke"
+
+// longestUniqueSubstring("");
+// Output: 0
+
+
+
+function longestUniqueSubstring(s) {
+  let sub = ""
+  let maxLength = 0
+
+  for (let char of s) {
+    let index = sub.indexOf(char)
+    if (index === -1) {
+      sub += char
+    } else {
+      sub = sub.slice(index + 1) + char
+    }
+    maxLength = Math.max(maxLength, sub.length)
+  }
+  return maxLength;
 }
 
-console.log(secondLargest([3, 6, 1 , 12, 55, 2]))
+console.log(longestUniqueSubstring("abvabcbb"));
