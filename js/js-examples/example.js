@@ -1085,20 +1085,93 @@ Increments the private field tracking how many times the book has been opened. *
 
 
 
-function longestUniqueSubstring(s) {
-  let sub = ""
-  let maxLength = 0
+// function longestUniqueSubstring(s) {
+//   let sub = ""
+//   let maxLength = 0
 
-  for (let char of s) {
-    let index = sub.indexOf(char)
-    if (index === -1) {
-      sub += char
-    } else {
-      sub = sub.slice(index + 1) + char
-    }
-    maxLength = Math.max(maxLength, sub.length)
-  }
-  return maxLength;
-}
+//   for (let char of s) {
+//     let index = sub.indexOf(char)
+//     if (index === -1) {
+//       sub += char
+//     } else {
+//       sub = sub.slice(index + 1) + char
+//     }
+//     maxLength = Math.max(maxLength, sub.length)
+//   }
+//   return maxLength;
+// }
 
-console.log(longestUniqueSubstring("abvabcbb"));
+// console.log(longestUniqueSubstring("abvabcbb"));
+
+
+// Write a JavaScript function called sumArray that takes an array of numbers and returns the sum of all the numbers in the array.
+
+// sumArray([1, 2, 3, 4]); // should return 10
+// sumArray([10, -2, 5]);  // should return 13
+// sumArray([]);           // should return 0
+
+
+
+// function sumOfArray(arr) {
+//   let sum = 0;
+//   arr.forEach((n) => {
+//     sum += n
+//   }
+    
+//   )
+//   return sum
+// }
+
+// console.log(sumOfArray([1, 2, 3, 4]))
+// console.log(sumOfArray([10, -2, 5]))
+// console.log(sumOfArray([]))
+
+////////////////////////////////////////////////////////
+
+// Write a function called reverseString that takes a string and returns the reversed version of that string.
+
+// reverseString("hello");     // should return "olleh"
+// reverseString("world");     // should return "dlrow"
+// reverseString("a");
+
+
+// function reverseString(string) {
+//   let reverse = "";
+//   for (let i = string.length - 1; i >= 0; i--){
+//     reverse += string[i]
+//   }
+//   return reverse
+// }
+
+// console.log(reverseString("hello"));
+// console.log(reverseString("world"));
+// console.log(reverseString("h"));
+
+/////////////////////////////////////////////////////////
+
+// Write a function called findSmallest that takes an array of numbers and returns the smallest number in the array.
+
+// findSmallest([3, 5, 1, 8, -2]);   // should return -2
+// findSmallest([10, 20, 5]);        // should return 5
+// findSmallest([100]);              // should return 100
+
+// function findSmallest(arr) {
+ 
+//   return Math.min(...arr)
+  
+// }
+// console.log(findSmallest([1,3,5, -8]));
+
+
+
+///////////////////////////////////////////////////////
+
+// Write a function called findLongestWord that takes a sentence (a string) and returns the longest word in that sentence.
+
+// findLongestWord("The quick brown fox");      // should return "quick"
+// findLongestWord("I love JavaScript");        // should return "JavaScript"
+// findLongestWord("Hi");                       // should return "Hi"
+
+// function findLongestWord(sentence) {
+  
+// }
